@@ -1,6 +1,22 @@
 accessible: true
-author: ''
-context: print i+1 if your types i.
+author: 'KWANG KIM'
+context: |- 
+        Make a program whether a given number from a user is 5 or not. Please, see the following screenshots. Your output should be same for a given number. 
+        
+        If a user types 5, it print **EQUAL**. 
+
+        .. code-block:: bash
+
+             Type an integer:5
+             EQUAL
+
+        If a user types a number which is not 5, it print **NOT EQUAL**.
+
+        .. code-block:: bash
+
+             Type an integer:1
+             NOT EQUAL
+    
 environment: e2e
 evaluate: best
 groups: false
@@ -8,28 +24,28 @@ limits:
     memory: '100'
     output: '2'
     time: '30'
-name: 'e2e'
+name: Five or not.
 network_grading: false
 order: 10
 problems:
-    addone:
+    fiveornot:
         header: |-
-            
+            Your code needs to look the following code.
 
-            .. code-block:: c
+            .. code-block:: c++
 
-                #include <cstdlib>
-                #include <ctime>
                 #include <iostream>
                 using namespace std;
-                int main(int argc,char** argv)
+                int main()
                 {
                     cout<<"Type your integer:";
                     //Write your code below.
                     return 0;
                 }
-        language: c
-        name: e2e
+            
+            Please, type your code below which you need to put between :code:`cout<<"Type your integer:";` and :code:`return 0;`.
+        language: cpp
+        name: Five or not
         type: code
 stored_submissions: 0
 submission_limit:

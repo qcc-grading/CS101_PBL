@@ -60,26 +60,28 @@ subprocess.run("rm -rf *.c *.tpl *.h *.o", shell=True)
 
 LANG = input.get_input('@lang')
 import pexpect as px
-def e2e(name, order, timeout=5):      
+def e2e(name, orders, timeout=5):      
     child = px.spawn('./'+name)
     #child.delaybeforesend = 0
     output=''
-    # if order is not empty,  
-    if order['expect']:
-        child.expect(order['expect'])
-    if order['send']:
-        child.sendline(order['send'])
-    retcode = child.expect([px.TIMEOUT, px.EOF],timeout)
-    if retcode==0:
-        return "Failure"
-    elif child.after is not None:
-        output=''.join(child.before.decode("utf-8").split())
-    if order['check'] == output:
-        return "Success"
-    else:
-        return "Failure"
-order={'expect':'integer:','send':'5','check':'56'}
-result=e2e('student_code',order)
+    # if order is not empty, 
+    for order in orders: 
+        if order['expect']:
+            child.expect(order['expect'])
+        if order['send']:
+            child.sendline(order['send'])
+        retcode = child.expect([px.TIMEOUT, px.EOF],timeout)
+        if retcode==0:
+            return "Failure"
+        elif child.after is not None:
+            output=''.join(child.before.decode("utf-8").split())
+        if order['check'] == output:
+            continue
+        else:
+            return "Failure"
+    return "Success"
+orders=[{'expect':'integer:','send':'5','check':'5EQUAL'},{'expect':'integer:','send':'6','check':'6NOT EQUAL'},{'expect':'integer:','send':'0','check':'0NOT EQUAL'}]
+result=e2e('student_code',orders)
 score = 0
 if result == "Success":
     score = 100

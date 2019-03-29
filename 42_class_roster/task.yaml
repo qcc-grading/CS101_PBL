@@ -165,7 +165,7 @@ problems:
         boxes:
             b1:
                 type: text
-                cotent: :code:`{`
+                cotent: start
 
             b2:
                 type: multiline
@@ -175,7 +175,7 @@ problems:
 
             b3:
                 type: text
-                cotent: :code:`}`
+                cotent: end
                
 
 

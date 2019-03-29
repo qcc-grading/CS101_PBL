@@ -99,6 +99,7 @@ problems:
         type: multiple_choice
         header: |-
             Assume
+
             .. code-block:: cpp
 
                 vector<string> names={"Bob","Jane","Jim","Lee","Python","Java"};
@@ -165,7 +166,7 @@ problems:
         boxes:
             b1:
                 type: text
-                cotent: start
+                content: :code:`{`
 
             b2:
                 type: multiline
@@ -175,7 +176,7 @@ problems:
 
             b3:
                 type: text
-                cotent: end
+                content: :code:`}`
                
 
 

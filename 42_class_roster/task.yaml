@@ -112,13 +112,13 @@ problems:
         error_message: "Count E!"
         success_message: "You are right!"    
         choices:
-            - text: 0
+            - text: '0'
               valid: false
-            - text: 1
+            - text: '1'
               valid: false
-            - text: 2
+            - text: '2'
               valid: false
-            - text: 3
+            - text: '3'
               valid: true
     
     report:

@@ -21,7 +21,7 @@ int main(int argc,char** argv)
 	if( d<err && d>-err){
 		cout<<"Success";
 	}
-	else cout<<"@@@username@@";
+	else cout<<"@@@username@@"<<" fail?";
 	delete[] a;
 	return 0;
 }

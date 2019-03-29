@@ -11,7 +11,8 @@ double answer(double f){
 int main(int argc,char** argv)
 {
 	srand(time(NULL));
-	double i = rand();
+	double s[]={42.1,35.8,9.1,83.4};
+	double i = rand()%4;
 	double d=answer(i)-celsius(i);
 	double err=0.0001;
 	if( d<err && d>-err){

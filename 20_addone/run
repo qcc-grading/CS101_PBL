@@ -23,38 +23,6 @@ if p.returncode:
     feedback.set_global_feedback("The compilation of your code has failed. Please see the exit message of ``make`` command:")
     feedback.set_global_feedback(rst.get_codeblock('', make_output), True)
     exit(0)
-"""
-else:
-    # Cppcheck
-    p = subprocess.Popen(shlex.split("make check"), stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
-    cppcheck_output = p.communicate()[0].decode('utf-8')
-    if p.returncode:
-        feedback.set_tag("cppcheck", True)
-        feedback.set_global_result("failed")
-        feedback.set_global_feedback("The compilation of your code with ``cppcheck`` has failed. Please see the exit message of ``make`` command:")
-        feedback.set_global_feedback(rst.get_codeblock('', cppcheck_output), True)
-        exit(0)
-    else:
-        feedback.set_global_result("success")
-        feedback.set_global_feedback("- Your code compiled.\n")
-# Parse banned functions
-try:
-    banned_funcs = re.findall("BAN_FUNCS\(([a-zA-Z0-9_, ]*)\)", open('tests.c').read())[-1].replace(" ", "").split(",")
-    banned_funcs = list(filter(None, banned_funcs))
-except IndexError:
-    banned_funcs = []
-
-if banned_funcs:
-    p = subprocess.Popen(shlex.split("readelf -s student_code.o"), stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
-    readelf_output = p.communicate()[0].decode('utf-8')
-    for func in banned_funcs:
-        if re.search("UND {}\n".format(func), readelf_output):
-            feedback.set_tag("banned_funcs", True)
-            feedback.set_global_result("failed")
-            feedback.set_global_feedback("You have used the function {}, which is not authorized.".format(func))
-            exit(0)
-
-"""
 # Remove source files
 subprocess.run("rm -rf *.c *.tpl *.h *.o", shell=True)
 

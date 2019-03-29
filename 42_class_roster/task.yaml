@@ -53,22 +53,19 @@ problems:
             
             .. code-block:: bash
 
-                Type the name of student 0:James
-                Type the record of attendances for James:L
+                Type the name of student:James
+                Type the record of attendances:L
                 Do you want to add more students?(y/n):y
-                Type the name of student 1:Curry
-                Type the record of attendances for Curry:E
+                Type the name of student:Curry
+                Type the record of attendances:E
                 Do you want to add more students?(y/n):n
-
-            .. math::
-
-                \frac{1}{2}
                             
             Do not forget `{ }`.
 
             .. code-block:: c++
 
                 void setup(vector<string>& names, vector<char>& attendances)
+    
 
 stored_submissions: 0
 submission_limit:

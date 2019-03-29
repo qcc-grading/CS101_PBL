@@ -24,7 +24,7 @@ limits:
     memory: '100'
     output: '2'
     time: '30'
-name: 22. Positive, zero or negative.
+name: 21. Five or not.
 network_grading: false
 order: 10
 problems:

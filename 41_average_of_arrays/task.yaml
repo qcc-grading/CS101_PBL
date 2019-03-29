@@ -1,57 +1,43 @@
 accessible: true
 author: 'KWANG KIM'
 context: |- 
-        Make a program which checks whether a given integer from a user is positive, zero or negative. Please, see the following screenshots. Your output should be same for a given number. 
+        Make a function :code:`double avg(int a[], int n)` which returns the average of an integer array :code:`a` of the size :code:`n`.
         
-        If a user types a positive integer like 5, it print **POSITIVE**. 
+        For example,
 
-        .. code-block:: bash
-
-             Type an integer:5
-             POSITIVE
-
-        If a user types 0, it print **ZERO**.
-
-        .. code-block:: bash
-
-             Type an integer:0
-             ZERO
+        .. code-block:: c++
         
-        If a user types a negative integer like -3, it print **NEGATIVE**.
+            int a[4]={1,1,2,3};
+            double av=avg(a,4);
+            cout<<av;
+
+        will print
 
         .. code-block:: bash
 
-             Type an integer:-3
-             NEGATIVE   
-environment: e2e
+            1.75
+
+environment: cpp
 evaluate: best
 groups: false
 limits:
     memory: '100'
     output: '2'
     time: '30'
-name: 22. Positive, zero or neagive
+name: 41. the average of an array of the size n
 network_grading: false
 order: 10
 problems:
-    positivezeronegative:
+    avgarrayn:
         header: |-
-            Your code needs to look the following code.
-
-            .. code-block:: c++
-
-                #include <iostream>
-                using namespace std;
-                int main()
-                {
-                    cout<<"Type your integer:";
-                    //Write your code below.
-                    return 0;
-                }
+            You **only** need to make the funcion :code:`double avg(int a[], int n)`. Do not forget `{ }`.
             
-            Please, type your code below which is between :code:`cout<<"Type your integer:";` and :code:`return 0;`.
+            .. code-block:: c++
+        
+                double avg(int a[], int n)
+
         language: cpp
-        name: Positive zero, negative
+        name: average of an array of the size n
         type: code
 stored_submissions: 0
 submission_limit:

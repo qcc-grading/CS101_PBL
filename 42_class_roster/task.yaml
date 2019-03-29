@@ -5,14 +5,14 @@ context: |
 
     For the names of students, we use :code:`names` *vector*.
 
-    .. code-block:: c++
+    .. code-block:: cpp
 
         vector<string> names;
 
     For the today's attendance records, we use
     :code:`attendances` *vector*.
 
-    .. code-block:: c++
+    .. code-block:: cpp
 
         vector<char> attendances;
 
@@ -20,7 +20,7 @@ context: |
 
     :code:`names` and :code:`attendances` are related by the **index**. For example, if
 
-    .. code-block:: c++
+    .. code-block:: cpp
 
         names[3]="Henry";
         atttendances[3]='L';
@@ -44,7 +44,7 @@ problems:
     setup:
         default: ''
         name: Setup the roster and attendance records.
-        language: c++
+        language: cpp
         type: code
         header: |-
             Make a :code:`void setup(vector<string>& names, vector<char>& attendances)` which saves names and attendance records of students.
@@ -62,7 +62,7 @@ problems:
                             
             Do not forget `{ }`.
 
-            .. code-block:: c++
+            .. code-block:: cpp
 
                 void setup(vector<string>& names, vector<char>& attendances)
 
@@ -76,13 +76,13 @@ problems:
 
             For example,
                       
-            .. code-block:: c++
+            .. code-block:: cpp
 
                 cout<<count(attendances,'L');
 
             will print the number of present students.
 
-            .. code-block:: c++
+            .. code-block:: cpp
 
                 cout<<count(attendances,'A');
             
@@ -90,7 +90,7 @@ problems:
 
             Do not forget `{ }`.
 
-            .. code-block:: c++
+            .. code-block:: cpp
 
                int count(const vector<char>& attendances, char att)  
     
@@ -99,14 +99,14 @@ problems:
         type: multiple_choice
         header: |-
             Assume
-            .. code-block:: c++
+            .. code-block:: cpp
 
                 vector<string> names={"Bob","Jane","Jim","Lee","Python","Java"};
                 vector<char> attendances={'A','P','E','E','A','E'};
             
             . What it the output of the following code?
 
-            .. code-block:: c++
+            .. code-block:: cpp
 
                 cout<<count(attendances,'E');
         error_message: "Count E!"
@@ -131,7 +131,7 @@ problems:
 
             For example, if
                       
-            .. code-block:: c++
+            .. code-block:: cpp
 
                 vector<string> names={"Bob","Jane","Jim","Lee","Python","Java"};
                 vector<char> attendances={'P','A','A','E','A','E'};
@@ -154,7 +154,7 @@ problems:
 
             Do not forget `{ }`.
 
-            .. code-block:: c++
+            .. code-block:: cpp
 
                void report(const vector<char>& attendances)
 
@@ -171,7 +171,7 @@ problems:
                 type: multiline
                 maxChars: 1000 
                 lines: 5
-                language: c++
+                language: cpp
 
             b3:
                 type: text

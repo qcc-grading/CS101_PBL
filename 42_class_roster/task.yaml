@@ -180,7 +180,7 @@ problems:
     ttt:
         type: text
         name: tttt
-        content: hi
+        header: hi
                
 
 

@@ -164,19 +164,18 @@ problems:
         name: extra questions
         header: Try these questions.
         boxes:
-            b1:
+            box1:
                 type: text
-                content: :code:`{`
+                content: Help
 
-            b2:
-                type: multiline
+            box2:
+                type: code
                 maxChars: 1000 
-                lines: 5
                 language: cpp
 
-            b3:
+            box3:
                 type: text
-                content: :code:`}`
+                content: Some additional text
                
 
 

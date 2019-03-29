@@ -10,13 +10,13 @@ context: |
         vector<string> names;
 
     For the today's attendance records, we use
-    :code:`attendances` *vector.
+    :code:`attendances` *vector*.
 
     .. code-block:: c++
 
         vector<char> attendances;
 
-     Here we use `P` as the presence, `L` as the lateness, `A` as the absence, and `E` as the excuse.
+    Here we use `P` as the presence, `L` as the lateness, `A` as the absence, and `E` as the excuse.
 environment: cpp
 evaluate: best
 groups: false

@@ -160,7 +160,7 @@ problems:
                void report(const vector<char>& attendances)
 
     lsatq:
-        type: custom
+        type: text
         name: extra questions
         header: Try these questions.
         boxes:

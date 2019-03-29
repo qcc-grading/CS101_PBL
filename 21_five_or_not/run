@@ -41,11 +41,11 @@ def e2e(name, orders, timeout=5):
             child.sendline(order['send'])
         retcode = child.expect([px.TIMEOUT, px.EOF],timeout)
         if retcode==0:
-            print("retcode==0")
+            #print("retcode==0")
             return "Failure"
         elif child.after is not None:
             output=''.join(child.before.decode("utf-8").split())
-        print("output:",output)
+        #print("output:",output)
         if order['check'] == output:
             continue
         else:

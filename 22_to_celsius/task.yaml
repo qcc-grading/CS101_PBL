@@ -1,0 +1,91 @@
+accessible: true
+author: ''
+context: ''
+environment: cpp
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    memory: '100'
+    time: '30'
+    output: '2'
+name: 22. To celsius
+network_grading: false
+order: 10
+problems:
+    celsius:
+        language: cpp
+        default: ''
+        name: To celsius
+        type: code
+        header: |-
+            Write only the *body* of a function called *celsius* which receives a floating point
+            number *f* representing a temperature value in Fahrenheit degrees and and returns
+            the equivalent temperature value mesured in Celsius degrees, according to the conversion
+
+            .. math::
+               C = \frac{5}{9}\cdot(F-32)
+
+            .. code-block:: c
+
+                double celsius(double f)
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags:
+    '0':
+        visible: true
+        description: Your code exceeds the maximum allowed time.
+        name: Timeout
+        id: timeout
+        type: 1
+    '1':
+        description: ''
+        id: sigsegv
+        visible: true
+        type: 1
+        name: Segmentation Fault
+    '2':
+        description: You code does not compile.
+        visible: true
+        id: not_compile
+        type: 1
+        name: Not compile
+    '3':
+        type: 1
+        id: memory
+        description: ''
+        name: Memory Exceeded
+        visible: true
+    '4':
+        type: 1
+        id: sigfpe
+        visible: true
+        description: ''
+        name: Floating Point Exception
+    '5':
+        name: Double free
+        visible: true
+        type: 1
+        description: Your code produced a double free.
+        id: double_free
+    '6':
+        id: banned_funcs
+        name: Banned functions
+        visible: true
+        description: You use some banned functions.
+        type: 1
+    '7':
+        visible: true
+        name: Cppcheck fails
+        type: 1
+        id: cppcheck
+        description: Your code does not compile with cppcheck
+    '8':
+        description: ''
+        visible: true
+        type: 2
+        name: S1
+        id: ''
+weight: 1.0

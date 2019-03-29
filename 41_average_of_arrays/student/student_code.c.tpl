@@ -22,6 +22,6 @@ int main(int argc,char** argv)
 		cout<<"Success";
 	}
 	else cout<<"Fail";
-	delete a[];
+	delete[] a;
 	return 0;
 }

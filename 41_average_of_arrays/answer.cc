@@ -1,5 +1,5 @@
-int i=0;
-cin>>i;
-if(i>0) cout<<"POSITIVE";
-else if (i==0) cout<<"ZERO";
-else cout<<"NEGATIVE";
+{
+    double s=0;
+    for(int i=0;i<n;++i) s=s+a[i];
+    return s/n;
+}

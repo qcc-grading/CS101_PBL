@@ -1,7 +1,7 @@
 accessible: true
 author: KWANG KIM
 context: |
-    We want to make a Class Roster program which save the today's attendance records of CS101 students. To allow a **dynamic** roster, we will use :code:`vector`'s for names of students and their attendance records.
+    We want to make a Class Roster program which save the today's attendance records of CS101 students. To allow a **dynamic** roster, we will use :code:`vector` types for names of students and their attendance records.
 
     For the names of students, we use :code:`names` *vector*.
 
@@ -52,23 +52,24 @@ problems:
             Please, check the following screenshot.
             
             .. code-block:: bash
-            Type the name of student 0:James
-            Type the record of attendances for James:L
-            Do you want to add more students?(y/n):y
-            Type the name of student 1:Curry
-            Type the record of attendances for Curry:E
-            Do you want to add more students?(y/n):n
+
+                Type the name of student 0:James
+                Type the record of attendances for James:L
+                Do you want to add more students?(y/n):y
+                Type the name of student 1:Curry
+                Type the record of attendances for Curry:E
+                Do you want to add more students?(y/n):n
 
             .. math::
 
-            \frac{1}{2}
+                \frac{1}{2}
                             
             Do not forget `{ }`.
 
             .. code-block:: c++
 
                 void setup(vector<string>& names, vector<char>& attendances)
-                
+
 stored_submissions: 0
 submission_limit:
     amount: -1

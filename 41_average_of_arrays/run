@@ -74,5 +74,5 @@ feedback.set_global_result("success" if score >= 50 else "failed")
 
 # test
 data=input.load_input()
-feedback.set_global_feedback(str(data))
+feedback.set_global_feedback(str(data),result)
 

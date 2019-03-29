@@ -165,15 +165,16 @@ problems:
         header: Try these questions.
         boxes:
             box1:
+                name: box one
                 type: text
                 content: Help
 
             box2:
                 type: code
-                maxChars: 1000 
                 language: cpp
 
             box3:
+                name: box2
                 type: text
                 content: Some additional text
                

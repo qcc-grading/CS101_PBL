@@ -33,7 +33,7 @@ problems:
             Your code needs to look the following code.
 
             .. code-block:: c++
-            
+
                 #include <iostream>
                 using namespace std;
                 int main()
@@ -42,6 +42,7 @@ problems:
                     //Write your code below.
                     return 0;
                 }
+            
             Please, type your code below which you need to put between :code:`cout<<"Type your integer:";` and :code:`return 0;`.
         language: cpp
         name: Five or not

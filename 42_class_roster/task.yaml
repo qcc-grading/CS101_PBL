@@ -165,7 +165,6 @@ problems:
         header: Try these questions.
         boxes:
             box1:
-                name: box one
                 type: text
                 content: Help
 
@@ -174,7 +173,6 @@ problems:
                 language: cpp
 
             box3:
-                name: box2
                 type: text
                 content: Some additional text
 stored_submissions: 0

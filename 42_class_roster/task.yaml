@@ -43,8 +43,8 @@ order: 10
 problems:
     setup:
         default: ''
-        name: setup code
-        language: cpp
+        name: Setup the roster and attendance records.
+        language: c++
         type: code
         header: |-
             Make a :code:`void setup(vector<string>& names, vector<char>& attendances)` which saves names and attendance records of students.
@@ -157,8 +157,8 @@ problems:
             .. code-block:: c++
 
                void report(const vector<char>& attendances)
-               
-    extra:
+
+    lsatq:
         type: code
         name: extra questions
         header: Try these questions.
@@ -173,7 +173,7 @@ problems:
                 lines: 5
                 language: c++
 
-           b1:
+            b3:
                 type: text
                 cotent: :code:`}`
                

@@ -66,9 +66,9 @@ problems:
 
                 void setup(vector<string>& names, vector<char>& attendances)
 
-     count:
+    count:
         default: ''
-        name: setup code
+        name: Count the attendance.
         language: cpp
         type: code
         header: |-
@@ -76,13 +76,13 @@ problems:
 
             For example,
                       
-            .. code-block:: bash
+            .. code-block:: c++
 
                 cout<<count(attendances,'L');
 
             will print the number of present students.
 
-            .. code-block:: bash
+            .. code-block:: c++
 
                 cout<<count(attendances,'A');
             
@@ -92,7 +92,105 @@ problems:
 
             .. code-block:: c++
 
-               int count(const vector<char>& attendances, char att)   
+               int count(const vector<char>& attendances, char att)  
+    
+    MCQcount:
+        name: Checkup question for count function.
+        type: multiple_choice
+        header: |-
+            Assume
+            .. code-block:: c++
+
+                vector<string> names={"Bob","Jane","Jim","Lee","Python","Java"};
+                vector<char> attendances={'A','P','E','E','A','E'};
+            
+            . What it the output of the following code?
+
+            .. code-block:: c++
+
+                cout<<count(attendances,'E');
+        error_message: "Count E!"
+        success_message: "You are right!"    
+        choices:
+            - text: 0
+              valid: false
+            - text: 1
+              valid: false
+            - text: 2
+              valid: false
+            - text: 3
+              valid: true
+    
+    report:
+        default: ''
+        name: Report the result.
+        language: cpp
+        type: code
+        header: |-
+            Make a :code:`void report(const vector<char>& attendances)` which returns the report uing above :code:`count` function.
+
+            For example, if
+                      
+            .. code-block:: c++
+
+                vector<string> names={"Bob","Jane","Jim","Lee","Python","Java"};
+                vector<char> attendances={'P','A','A','E','A','E'};
+
+            , the following code
+
+            .. code-block:: bash
+
+               report(attendances);
+
+            
+            will print the these results.
+
+            .. code-block:: bash
+
+                The number of absent students is 2.
+                The number of late students is 0.
+                The number of excused students is 2.
+                The number of present students is 1.
+
+            Do not forget `{ }`.
+
+            .. code-block:: c++
+
+               void report(const vector<char>& attendances)
+    extra:
+        type: code
+        name: extra questions
+        header: Try these questions.
+        boxes:
+            b1:
+                type: text
+                cotent: |-
+                    
+                    .. code:: c++
+
+                        \{
+
+            b2:
+                type: multiline
+                maxChars: 1000 
+                lines: 5
+
+           b1:
+                type: text
+                cotent: |-
+                    
+                    .. code:: c++
+
+                        \}
+               
+
+
+              
+
+                
+
+
+
 
 stored_submissions: 0
 submission_limit:

@@ -1,7 +1,7 @@
 accessible: true
 author: 'KWANG KIM'
 context: |- 
-        Make a program whether a given number from a user is 5 or not. Please, see the following screenshots. Your output should be same for a given number. 
+        Make a program which checks whether a given integer from a user is 5 or not. Please, see the following screenshots. Your output should be same for a given number. 
         
         If a user types 5, it print **EQUAL**. 
 
@@ -24,7 +24,7 @@ limits:
     memory: '100'
     output: '2'
     time: '30'
-name: Five or not.
+name: 22. Positive, zero or negative.
 network_grading: false
 order: 10
 problems:
@@ -43,7 +43,7 @@ problems:
                     return 0;
                 }
             
-            Please, type your code below which you need to put between :code:`cout<<"Type your integer:";` and :code:`return 0;`.
+            Please, type your code below which is between :code:`cout<<"Type your integer:";` and :code:`return 0;`.
         language: cpp
         name: Five or not
         type: code

@@ -1,22 +1,28 @@
 accessible: true
 author: 'KWANG KIM'
 context: |- 
-        Make a program whether a given number from a user is 5 or not. Please, see the following screenshots. Your output should be same for a given number. 
+        Make a program which checks whether a given integer from a user is 5 or not. Please, see the following screenshots. Your output should be same for a given number. 
         
-        If a user types 5, it print **EQUAL**. 
+        If a user types a positive integer like 5, it print **POSITIVE**. 
 
         .. code-block:: bash
 
              Type an integer:5
-             EQUAL
+             POSITIVE
 
-        If a user types a number which is not 5, it print **NOT EQUAL**.
+        If a user types 0, it print **ZERO**.
 
         .. code-block:: bash
 
-             Type an integer:1
-             NOT EQUAL
-    
+             Type an integer:0
+             ZERO
+        
+        If a user types a negative integer like -3, it print **NEGATIVE**.
+
+        .. code-block:: bash
+
+             Type an integer:-3
+             NEGATIVE   
 environment: e2e
 evaluate: best
 groups: false
@@ -43,9 +49,9 @@ problems:
                     return 0;
                 }
             
-            Please, type your code below which you need to put between :code:`cout<<"Type your integer:";` and :code:`return 0;`.
+            Please, type your code below which is between :code:`cout<<"Type your integer:";` and :code:`return 0;`.
         language: cpp
-        name: Five or not
+        name: Positive zero, negative
         type: code
 stored_submissions: 0
 submission_limit:

@@ -12,7 +12,7 @@ int main(int argc,char** argv)
 {
 	srand(time(NULL));
 	double i = rand();
-	double diff=answer(i)-celsius(i);
+	double d=answer(i)-celsius(i);
 	double err=0.0001;
 	if( d<err || d>-err){
 		cout<<"Success";

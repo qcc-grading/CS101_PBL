@@ -179,6 +179,7 @@ problems:
                 content: Some additional text
     ttt:
         type: text
+        name: tttt
         content: hi
                
 

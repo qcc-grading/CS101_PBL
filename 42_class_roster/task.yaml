@@ -177,20 +177,6 @@ problems:
                 name: box2
                 type: text
                 content: Some additional text
-    ttt:
-        type: text
-        name: tttt
-        header: hi
-               
-
-
-              
-
-                
-
-
-
-
 stored_submissions: 0
 submission_limit:
     amount: -1

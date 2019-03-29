@@ -30,11 +30,11 @@ limits:
     memory: '100'
     output: '2'
     time: '30'
-name: Five or not.
+name: 22. Positive, zero or negative
 network_grading: false
 order: 10
 problems:
-    fiveornot:
+    positivezeronegative:
         header: |-
             Your code needs to look the following code.
 

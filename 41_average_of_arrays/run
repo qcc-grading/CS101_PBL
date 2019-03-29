@@ -10,6 +10,8 @@ from inginious import feedback, rst, input
 # Switch working directory to student/
 os.chdir("student")
 
+
+
 # Fetch and save the student code into a file for compilation
 input.parse_template("student_code.c.tpl", "student_code.cc")
 
@@ -69,3 +71,8 @@ else: # Fail
 
 feedback.set_grade(score)
 feedback.set_global_result("success" if score >= 50 else "failed")
+
+# test
+data=input.load_input()
+feedback.set_global_feedback(data)
+

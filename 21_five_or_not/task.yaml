@@ -1,15 +1,17 @@
 accessible: true
 author: 'KWANG KIM'
 context: |- 
-        Make a program whether a given number from a user is 5 or not. Please, see the following screenshots. Your output should be same for a given number.
-         If a user types 5, it print "EQUAL".
-        .. code-block:: 
+        Make a program whether a given number from a user is 5 or not. Please, see the following screenshots. Your output should be same for a given number. 
+         If a user types 5, it print **EQUAL**. 
+
+        .. code-block:: bash
 
              Type an integer:5
              EQUAL
-        If a user types a number which is not 5, it print "NOT EQUAL".
 
-        .. code-block:: 
+        If a user types a number which is not 5, it print **NOT EQUAL**.
+
+        .. code-block:: bash
 
              Type an integer:1
              NOT EQUAL

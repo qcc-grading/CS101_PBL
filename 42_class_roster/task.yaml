@@ -169,7 +169,7 @@ problems:
                 content: Help
 
             box2:
-                type: code
+                type: code_single_line
                 language: cpp
 
             box3:

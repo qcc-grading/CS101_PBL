@@ -157,6 +157,7 @@ problems:
             .. code-block:: c++
 
                void report(const vector<char>& attendances)
+               
     extra:
         type: code
         name: extra questions

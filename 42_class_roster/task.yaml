@@ -160,21 +160,22 @@ problems:
                void report(const vector<char>& attendances)
 
     lsatq:
-        type: text
-        name: extra questions
-        header: Try these questions.
+        type: code
+        header: some text
+        name: And again, another name
         boxes:
-            box1:
-                type: text
-                content: Help
-
-            box2:
-                type: code_single_line
-                language: cpp
-
-            box3:
+            boxId1:
                 type: text
                 content: Some additional text
+            boxId2:
+                type: input-text
+                maxChars: 10
+                optional: true
+            boxId3:
+                type: multiline
+                maxChars: 1000
+                lines: 8
+                language: cpp
 stored_submissions: 0
 submission_limit:
     amount: -1

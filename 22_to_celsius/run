@@ -56,7 +56,7 @@ if banned_funcs:
 
 """
 # Remove source files
-subprocess.run("rm -rf *.c *.tpl *.h *.o", shell=True)
+subprocess.run("rm -rf *.cc *.c *.tpl *.h *.o", shell=True)
 
 LANG = input.get_input('@lang')
 

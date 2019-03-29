@@ -177,6 +177,9 @@ problems:
                 name: box2
                 type: text
                 content: Some additional text
+    ttt:
+        type: text
+        header: hi
                
 
 

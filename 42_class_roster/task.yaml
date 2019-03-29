@@ -1,46 +1,47 @@
 accessible: true
-author: 'KWANG KIM'
-context: |- 
-        Make a function :code:`double avg(int a[], int n)` which returns the average of an integer array :code:`a` of the size :code:`n`.
-        
-        For example,
+author: KWANG KIM
+context: |
+    We want to make a Class Roster program which save the today's attendance records of CS101 students. To allow a **dynamic** roster, we will use :code:`vector`'s for names of students and their attendance records.
 
-        .. code-block:: c++
-        
-            int a[4]={1,1,2,3};
-            double av=avg(a,4);
-            cout<<av;
+    For the names of students, we use :code:`names` *vector*.
 
-        will print
+    .. code-block:: c++
 
-        .. code-block:: bash
+        vector<string> names;
 
-            1.75
+    For the today's attendance records, we use
+    :code:`attendances` *vector.
 
+    .. code-block:: c++
+
+        vector<char> attendances;
+
+     Here we use `P` as the presence, `L` as the lateness, `A` as the absence, and `E` as the excuse.
 environment: cpp
 evaluate: best
 groups: false
+input_random: '2'
 limits:
     memory: '100'
-    output: '2'
     time: '30'
-name: 41. the average of an array of the size n
+    output: '2'
+name: 42. Class Roster
 network_grading: false
 order: 10
 problems:
     avgarrayn:
-        header: |-
-            You **only** need to make the funcion :code:`double avg(int a[], int n)`. 
-            
-            Do not forget `{ }`.
-            
-            .. code-block:: c++
-        
-                double avg(int a[], int n)
-
-        language: cpp
+        default: ''
         name: average of an array of the size n
+        language: cpp
         type: code
+        header: |-
+            You **only** need to make the funcion :code:`double avg(int a[], int n)`.
+
+            Do not forget `{ }`.
+
+            .. code-block:: c++
+
+                double avg(int a[], int n)
 stored_submissions: 0
 submission_limit:
     amount: -1
@@ -49,55 +50,55 @@ tags:
     '0':
         description: Your code exceeds the maximum allowed time.
         id: timeout
+        visible: true
         name: Timeout
         type: 1
-        visible: true
     '1':
         description: ''
         id: sigsegv
+        visible: true
         name: Segmentation Fault
         type: 1
-        visible: true
     '2':
-        description: You code does not compile.
         id: not_compile
-        name: Not compile
         type: 1
+        name: Not compile
         visible: true
+        description: You code does not compile.
     '3':
-        description: ''
+        type: 1
         id: memory
         name: Memory Exceeded
-        type: 1
+        description: ''
         visible: true
     '4':
-        description: ''
+        type: 1
+        visible: true
         id: sigfpe
+        description: ''
         name: Floating Point Exception
-        type: 1
-        visible: true
     '5':
-        description: Your code produced a double free.
         id: double_free
-        name: Double free
-        type: 1
+        description: Your code produced a double free.
         visible: true
+        type: 1
+        name: Double free
     '6':
-        description: You use some banned functions.
-        id: banned_funcs
+        visible: true
         name: Banned functions
         type: 1
+        id: banned_funcs
+        description: You use some banned functions.
+    '8':
+        id: cppcheck
         visible: true
+        description: Your code does not compile with cppcheck
+        type: 1
+        name: Cppcheck fails
     '7':
-        description: ''
-        id: ''
-        name: S1
         type: 2
         visible: true
-    '8':
-        description: Your code does not compile with cppcheck
-        id: cppcheck
-        name: Cppcheck fails
-        type: 1
-        visible: true
+        description: ''
+        name: S1
+        id: ''
 weight: 1.0

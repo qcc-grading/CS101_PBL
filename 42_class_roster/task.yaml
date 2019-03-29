@@ -179,7 +179,7 @@ problems:
                 content: Some additional text
     ttt:
         type: text
-        header: hi
+        content: hi
                
 
 

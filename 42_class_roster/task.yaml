@@ -164,24 +164,17 @@ problems:
         boxes:
             b1:
                 type: text
-                cotent: |-
-                    
-                    .. code:: c++
-
-                        \{
+                cotent: :code:`{`
 
             b2:
                 type: multiline
                 maxChars: 1000 
                 lines: 5
+                language: c++
 
            b1:
                 type: text
-                cotent: |-
-                    
-                    .. code:: c++
-
-                        \}
+                cotent: :code:`}`
                
 
 

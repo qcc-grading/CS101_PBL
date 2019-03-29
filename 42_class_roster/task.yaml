@@ -16,8 +16,20 @@ context: |
 
         vector<char> attendances;
 
-    Here we use `P` as the presence, `L` as the lateness, `A` as the absence, and `E` as the excuse.
-environment: cpp
+    Here we use the character **P** as the presence, **L** as the lateness, **A** as the absence, and **E** as the excuse.
+
+    :code:`names` and :code:`attendances` are related by the **index**. For example, if
+
+    .. code-block:: c++
+
+        names[3]="Henry";
+        atttendances[3]='L';
+
+    , the 4th student, Henry was late today. (The index starts with 0.)
+
+    Therefore the sizes of :code:`names` and :code:`attendances` should be exactly same.
+
+environment: e2e
 evaluate: best
 groups: false
 input_random: '2'
@@ -29,19 +41,34 @@ name: 42. Class Roster
 network_grading: false
 order: 10
 problems:
-    avgarrayn:
+    setup:
         default: ''
-        name: average of an array of the size n
+        name: setup code
         language: cpp
         type: code
         header: |-
-            You **only** need to make the funcion :code:`double avg(int a[], int n)`.
+            Make a :code:`void setup(vector<string>& names, vector<char>& attendances)` which saves names and attendance records of students.
 
+            Please, check the following screenshot.
+            
+            .. code-block:: bash
+            Type the name of student 0:James
+            Type the record of attendances for James:L
+            Do you want to add more students?(y/n):y
+            Type the name of student 1:Curry
+            Type the record of attendances for Curry:E
+            Do you want to add more students?(y/n):n
+
+            .. math::
+
+            \frac{1}{2}
+                            
             Do not forget `{ }`.
 
             .. code-block:: c++
 
-                double avg(int a[], int n)
+                void setup(vector<string>& names, vector<char>& attendances)
+                
 stored_submissions: 0
 submission_limit:
     amount: -1

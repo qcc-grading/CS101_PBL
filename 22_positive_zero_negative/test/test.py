@@ -1,3 +1,4 @@
+#pexpect part E2E
 import pexpect as px
 def e2e(name, orders, timeout=5):       
     for order in orders:
@@ -17,12 +18,14 @@ def e2e(name, orders, timeout=5):
             output=''.join(child.before.decode("utf-8").split())
         print("output:",output)
         if order['check'] == output:
+            print("next!")
             continue
         else:
+            print("not same: fail!")
             return "Failure"
     return "Success"
 ### We ignore spaces.
-orders=[{'expect':'integer:','send':'5','check':'5EQUAL'},{'expect':'integer:','send':'6','check':'6NOTEQUAL'},{'expect':'integer:','send':'2','check':'2NOTEQUAL'}]
+orders=[{'expect':'integer:','send':'7','check':'7POSITIVE'},{'expect':'integer:','send':'0','check':'0ZERO'},{'expect':'integer:','send':'-9','check':'-9NEGATIVE'}]
 result=e2e('student_code',orders)
 score = 0
 if result == "Success":

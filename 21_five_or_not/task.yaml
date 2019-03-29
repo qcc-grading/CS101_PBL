@@ -2,7 +2,8 @@ accessible: true
 author: 'KWANG KIM'
 context: |- 
         Make a program whether a given number from a user is 5 or not. Please, see the following screenshots. Your output should be same for a given number. 
-         If a user types 5, it print **EQUAL**. 
+        
+        If a user types 5, it print **EQUAL**. 
 
         .. code-block:: bash
 

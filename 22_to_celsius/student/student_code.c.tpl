@@ -14,7 +14,7 @@ int main(int argc,char** argv)
 	double i = rand();
 	double d=answer(i)-celsius(i);
 	double err=0.0001;
-	if( d<err || d>-err){
+	if( d<err && d>-err){
 		cout<<"Success";
 	}
 	else cout<<"Fail";

@@ -159,15 +159,15 @@ problems:
 
                void report(const vector<char>& attendances)
 
-    lsatq:
-        type: custom
+    last:
+        type: code
         header: some text
         name: And again, another name
         boxes:
             boxId1:
                 type: text
                 content: Some additional text
-                
+
 stored_submissions: 0
 submission_limit:
     amount: -1

@@ -167,15 +167,7 @@ problems:
             boxId1:
                 type: text
                 content: Some additional text
-            boxId2:
-                type: input-text
-                maxChars: 10
-                optional: true
-            boxId3:
-                type: multiline
-                maxChars: 1000
-                lines: 8
-                language: cpp
+                
 stored_submissions: 0
 submission_limit:
     amount: -1

@@ -160,7 +160,7 @@ problems:
                void report(const vector<char>& attendances)
 
     last:
-        type: custom 2
+        type: custom2
         header: Hello.
         name: And again, another name
         boxes:

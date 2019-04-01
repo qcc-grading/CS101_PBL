@@ -307,7 +307,7 @@ problems:
         type: code
         header: |-
             Make a :code:`void clear(vector<string>& names, vector<char>& attendances)` which makes :code:`names` and :code:`attendances` empty.
-            To make them empty, you may use :code:`clear()`( http://www.cplusplus.com/reference/vector/vector/clear/ ) member function.
+            To make them empty, you may use :code:`clear()` (http://www.cplusplus.com/reference/vector/vector/clear/) member function of the :code:`vector` class.
 
             For example, if we run the code below,
                       

@@ -36,7 +36,7 @@ order: 10
 problems:
     positivezeronegative:
         header: |-
-        
+
         name: Positive zero, negative
         type: custom
         boxes:
@@ -56,7 +56,7 @@ problems:
             question:
                 type: multiline
                 maxChars: 1000
-                lines: 5
+                lines: 6
                 language: cpp
 
             btext2:

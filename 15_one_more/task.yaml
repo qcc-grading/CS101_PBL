@@ -3,19 +3,19 @@ author: ''
 context: |- 
         Make a program which adds 1 to  a given integer from a user. Please, see the following screenshots. Your output should be **exactly same** for a given number. 
         
-        If a user types 5, it print **The answer is 6.**. 
+        If a user types 5, it print **The answer is 6!**. 
 
         .. code-block:: bash
 
              Type an integer:5
-             The answer is 6.
+             The answer is 6!
 
-        If a user types -3, it print **The answer is -2.**.
+        If a user types -3, it print **The answer is -2!**.
 
         .. code-block:: bash
 
              Type an integer:-3
-             The answer is -2.
+             The answer is -2!
         
 environment: cpp
 evaluate: e2e

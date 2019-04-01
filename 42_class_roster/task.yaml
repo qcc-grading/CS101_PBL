@@ -163,7 +163,7 @@ problems:
         header: hi
     
     last:
-        type: code
+        type: custom
         header: Hello.
         name: And again, another name
         boxes:

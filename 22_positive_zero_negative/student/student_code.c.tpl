@@ -3,6 +3,6 @@ using namespace std;
 int main()
 {
 	cout<<"Type your integer:";
-@	@positivezeronegative@@	
+@	@positivezeronegative/question@@	
 	return 0;
 }

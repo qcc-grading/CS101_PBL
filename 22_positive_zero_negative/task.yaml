@@ -36,23 +36,37 @@ order: 10
 problems:
     positivezeronegative:
         header: |-
-            Your code needs to look the following code.
-
-            .. code-block:: c++
-
-                #include <iostream>
-                using namespace std;
-                int main()
-                {
-                    cout<<"Type your integer:";
-                    //Write your code below.
-                    return 0;
-                }
-            
-            Please, type your code below which is between :code:`cout<<"Type your integer:";` and :code:`return 0;`.
-        language: cpp
+        
         name: Positive zero, negative
-        type: code
+        type: custom
+        boxes:
+            btext1:
+                type: text
+                content: |-
+                    Please, complete the program by typing your code  between :code:`cout<<"Type your integer:";` and :code:`return 0;`.
+
+                    .. code-block:: c++
+
+                        #include <iostream>
+                        using namespace std;
+                        int main()
+                        {
+                            cout<<"Type your integer:";
+                    
+            question:
+                type: multiline
+                maxChars: 1000
+                lines: 5
+                language: cpp
+
+            btext2:
+                type: text
+                content: |-
+
+                    .. code-block:: c++
+
+                            return 0;
+                        }
 stored_submissions: 0
 submission_limit:
     amount: -1

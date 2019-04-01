@@ -62,4 +62,4 @@ else: # Fail
     score = 0
 
 feedback.set_grade(score)
-feedback.set_global_result("success" if score >= 50 else "failed"+" "+output)
+feedback.set_global_result("success" if score >= 50 else "failed")

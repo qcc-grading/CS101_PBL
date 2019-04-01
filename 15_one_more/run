@@ -82,7 +82,7 @@ def e2e(name, orders, timeout=5):
         else:
             return "Failure"
     return "Success"
-orders=[{'expect':'integer:','send':'5','check':'5Theansweris6.'},{'expect':'integer:','send':'-9','check':'5Theansweris-8.'}]
+orders=[{'expect':'integer:','send':'5','check':'5Theansweris6!'},{'expect':'integer:','send':'-9','check':'5Theansweris-8!'}]
 result=e2e('student_code',orders)
 score = 0
 if result == "Success":

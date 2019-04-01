@@ -158,9 +158,12 @@ problems:
             .. code-block:: cpp
 
                void report(const vector<char>& attendances)
-
+    test:
+        type: demo
+        header: hi
+    
     last:
-        type: custom
+        type: code
         header: Hello.
         name: And again, another name
         boxes:

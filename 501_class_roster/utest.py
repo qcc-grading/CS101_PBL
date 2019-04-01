@@ -38,7 +38,9 @@ def ureport(scores):
     avg=round(sum(scores)/len(scores))
     feedback.set_grade(avg)
     feedback.set_global_result("success" if avg >=90  else "failed")
-    scores_list="["+(",".join([str(s) for x in scores])+"]"
-    feedback.set_global_feedback("The list of scores of each question is "+scores_list+".")
+    #scores_list="["+(",".join([str(s) for x in scores])+"]"
+    #feedback.set_global_feedback("The list of scores of each question is "+scores_list+".")
+    feedback.set_global_feedback("The list of scores of each question is .")
+
 
         

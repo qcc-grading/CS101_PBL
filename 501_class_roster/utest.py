@@ -1,5 +1,6 @@
 import subprocess, shlex, re
 from inginious import feedback, rst, input
+from e2e import make
 import sys
 
 def utest(template,codename,ext,tag_num,tag,e2etest=False,order=[],check=[]):

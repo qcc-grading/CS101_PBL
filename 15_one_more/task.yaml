@@ -17,8 +17,8 @@ context: |-
              Type an integer:-3
              The answer is -2!
         
-environment: cpp
-evaluate: e2e
+environment: e2e
+evaluate: best
 groups: false
 input_random: '0'
 limits:

@@ -44,8 +44,6 @@ q3=input.get_input("MCQcount")
 ans_key=3
 scores[2]=100 if (q3==ans_key) else 0
 
-#q5
-
 
 #q4
 codename='code4'
@@ -76,4 +74,4 @@ make(ans)
 check=check_maker(ans,order)
 scores[4]=utest(template,codename,ext,tag_num,tag,e2etest,order,check
 
-ureport(scores,60)
+#ureport(scores,60)

@@ -28,11 +28,15 @@ context: |
     , the 4th student, Henry was late today. (The index starts with 0.)
 
     Therefore the sizes of :code:`names` and :code:`attendances` should be exactly same.
-    In this project, we will make 
-    - :code:`void add(vector<string>& names, vector<char>& attendances)`
-    - :code:`int count(const vector<char>& attendances, char att)`
-    - :code:`void report(const vector<char>& attendances)`
-    - :code:`void clear(vector<string>& names, vector<char>& attendances)`
+    In this project, we will make
+    
+    .. code-block: cpp
+
+        void add(vector<string>& names, vector<char>& attendances)
+        int count(const vector<char>& attendances, char att)
+        void report(const vector<char>& attendances)
+        void clear(vector<string>& names, vector<char>& attendances)
+
 
     **Demo:** With this main function,
 

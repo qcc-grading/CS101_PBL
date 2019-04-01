@@ -2,9 +2,8 @@
 #include<string>
 #include<vector>
 using namespace std;
-void add(vector<string>& names, vector<char>& attendances){
+void add(vector<string>& names, vector<char>& attendances)
 @	@add@@
-}
 int count(const vector<char>& attendances, char att){ return 0;}
 void report(const vector<char>& attendances){}
 void clear(vector<string>& names, vector<char>& attendances){}

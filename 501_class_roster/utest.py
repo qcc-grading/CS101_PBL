@@ -1,6 +1,6 @@
 import subprocess, shlex, re
 from inginious import feedback, rst, input
-from e2e import make
+from e2e import make, e2e
 import sys
 
 def utest(template,codename,ext,tag_num,tag,e2etest=False,order=[],check=[]):
@@ -37,10 +37,10 @@ def utest(template,codename,ext,tag_num,tag,e2etest=False,order=[],check=[]):
         score = 0
     return score
 
-def ureport(scores):
+def ureport(scores,bar):
     avg=round(sum(scores)/len(scores))
     feedback.set_grade(avg)
-    feedback.set_global_result("success" if avg >=90  else "failed")
+    feedback.set_global_result("success" if avg >=bar  else "failed")
     #scores_list="["+(",".join([str(s) for x in scores])+"]"
     #feedback.set_global_feedback("The list of scores of each question is "+scores_list+".")
     #feedback.set_global_feedback("The list of scores of each question is .")

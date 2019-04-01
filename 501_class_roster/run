@@ -11,7 +11,7 @@ from utest import utest,ureport
 os.chdir("student")
 
 scores=[0]*5
-
+#q1
 codename='code1'
 template='code1.cc.tpl'
 ext="cc"
@@ -24,4 +24,59 @@ e2etest=True
 make(ans)
 check=check_maker(ans,order)
 scores[0]=utest(template,codename,ext,tag_num,tag,e2etest,order,check)
-ureport(scores)
+#q2
+codename='code2'
+template='code2.cc.tpl'
+ext="cc"
+tag_num="2"
+tag="count_function"
+#order=[{'expect': ':', 'send': 'a'}, {'expect': ':', 'send': 'Curry'}, {'expect': ':', 'send': 'L'}, {'expect': ':', 'send': 'n'}, {'expect': ':', 'send': 'd'}]
+#ans="ans1"
+e2etest=False
+
+#make(ans)
+#check=check_maker(ans,order)
+scores[1]=utest(template,codename,ext,tag_num,tag,e2etest,order=[],check=[None])
+
+
+#q3
+q3=input.get_input("MCQcount")
+ans_key=3
+scores[2]=100 if (q3==ans_key) else 0
+
+#q5
+
+
+#q4
+codename='code4'
+template='code4.cc.tpl'
+ext="cc"
+tag_num="4"
+tag="report_function"
+order=[{'expect': ':', 'send': 'b'},{'expect': ':', 'send': 'd'}]
+ans="ans4"
+e2etest=True
+
+make(ans)
+check=check_maker(ans,order)
+scores[3]=utest(template,codename,ext,tag_num,tag,e2etest,order,check)
+
+
+#q5
+codename='code5'
+template='code5.cc.tpl'
+ext="cc"
+tag_num="5"
+tag="report_function"
+order=[{'expect': ':', 'send': 'c'},{'expect': ':', 'send': 'd'}]
+ans="ans5"
+e2etest=True
+
+make(ans)
+check=check_maker(ans,order)
+scores[4]=utest(template,codename,ext,tag_num,tag,e2etest,order,check
+
+
+
+
+ureport(scores,bar=60)

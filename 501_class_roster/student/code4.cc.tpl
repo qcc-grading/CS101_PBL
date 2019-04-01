@@ -2,14 +2,14 @@
 #include<string>
 #include<vector>
 using namespace std;
-void add(vector<string>& names, vector<char>& attendances)
-@	@add@@
-int count(const vector<char>& attendances, char att){ return 0;}
-void report(const vector<char>& attendances){}
+void add(vector<string>& names, vector<char>& attendances){}
+int count(const vector<char>& attendances, char att){return 0;}
+void report(const vector<char>& attendances)
+@   @report@@
 void clear(vector<string>& names, vector<char>& attendances){}
 int main(){
-    vector<string> names;
-    vector<char> attendances;
+    vector<string> names {"A","B","C","D","E","F"};
+    vector<char> attendances {'A','A','L','E','E','E'};
     string choice="";
     do{
         cout<<"Attendance Roster"<<endl;

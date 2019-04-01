@@ -29,6 +29,7 @@ subprocess.run("rm -rf *.c *.tpl *.h *.o", shell=True)
 LANG = input.get_input('@lang')
 #pexpect part E2E
 import pexpect as px
+output=''
 def e2e(name, orders, timeout=5):       
     for order in orders:
         child = px.spawn('./'+name)
@@ -61,4 +62,4 @@ else: # Fail
     score = 0
 
 feedback.set_grade(score)
-feedback.set_global_result("success" if score >= 50 else "failed")
+feedback.set_global_result("success" if score >= 50 else "failed"+" "+output)

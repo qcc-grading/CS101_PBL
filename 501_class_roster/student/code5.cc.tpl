@@ -3,7 +3,14 @@
 #include<vector>
 using namespace std;
 void add(vector<string>& names, vector<char>& attendances){}
-int count(const vector<char>& attendances, char att){return 0;}
+int count(const vector<char>& attendances, char att)
+{
+    int c=0;
+    for(size_t i=0;i<attendances.size();++i){
+        if(attendances[i]==att) ++c;
+    }
+    return c;
+}
 void report(const vector<char>& attendances){}
 {
     static const vector<string> desc={"absent","late","excused","present"};
@@ -17,7 +24,7 @@ void report(const vector<char>& attendances){}
     }
 }
 void clear(vector<string>& names, vector<char>& attendances)
-@   @clear@@
+@@clear@@
 int main(){
     vector<string> names {"A","B","C","D","E","F"};
     vector<char> attendances {'A','A','L','E','E','E'};

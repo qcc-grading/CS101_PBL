@@ -72,6 +72,7 @@ e2etest=True
 
 make(ans)
 check=check_maker(ans,order)
-scores[4]=utest(template,codename,ext,tag_num,tag,e2etest,order,check
+scores[4]=utest(template,codename,ext,tag_num,tag,e2etest,order,check)
 
-#ureport(scores,60)
+#report
+ureport(scores,60)

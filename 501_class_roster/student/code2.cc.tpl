@@ -4,7 +4,7 @@
 using namespace std;
 void add(vector<string>& names, vector<char>& attendances){}
 int count(const vector<char>& attendances, char att)
-@   @count@@
+@@count@@
 void report(const vector<char>& attendances){}
 void clear(vector<string>& names, vector<char>& attendances){}
 int main(){

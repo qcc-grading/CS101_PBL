@@ -24,7 +24,8 @@ int main(){
     }while(choice != "d");
     cout<<"Bye."<<endl;
 }
-void add(vector<string>& names, vector<char>& attendances){
+void add(vector<string>& names, vector<char>& attendances)
+{
     string choice;
     do{
         string name="";

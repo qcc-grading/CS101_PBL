@@ -159,7 +159,11 @@ problems:
         type: code
         header: |-
             Make a :code:`void add(vector<string>& names, vector<char>& attendances)` which **adds** new names and attendance records of students.
-            For a simpilicity, we only type **the last name without any space**. (So we can still use :code:`cin`). We assume that a user type `A`, `L`, `E` and `P` properly.
+            For a simpilicity, we only type **the last name without any space**. 
+            
+            (So we can still use :code:`cin`). 
+            
+            We assume that a user type `A`, `L`, `E` and `P` properly.
             Please, check the following screenshot.
             
             .. code-block:: bash
@@ -184,6 +188,12 @@ problems:
         type: code
         header: |-
             Make a :code:`int count(const vector<char>& attendances, char att)` which returns the number of attendance records for :code:`att`.
+
+            .. code-block:: bash
+                A: absent
+                L: late
+                E: excused
+                P: Present     
 
             For example,
                       

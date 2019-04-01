@@ -313,7 +313,7 @@ problems:
                       
             .. code-block:: cpp
 
-                clear(vector<string>& names, vector<char>& attendances);
+                clear(names,attendances);
 
             ,  it will show
 

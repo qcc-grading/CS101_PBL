@@ -152,7 +152,7 @@ name: 501. Class Roster
 network_grading: false
 order: 10
 problems:
-    setup:
+    add:
         default: ''
         name: Setup the roster and attendance records.
         language: cpp

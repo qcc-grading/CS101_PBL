@@ -190,6 +190,7 @@ problems:
             Make a :code:`int count(const vector<char>& attendances, char att)` which returns the number of attendance records for :code:`att`.
 
             .. code-block:: bash
+            
                 A: absent
                 L: late
                 E: excused

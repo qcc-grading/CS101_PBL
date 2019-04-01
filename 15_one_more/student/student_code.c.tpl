@@ -2,9 +2,9 @@
 #include <ctime>
 #include <iostream>
 using namespace std;
-int main(int argc,char** argv)
+int main()
 {
 	cout<<"Type your integer:";
-@	@addone@@
+@	@addone/question@@
 	return 0;
 }

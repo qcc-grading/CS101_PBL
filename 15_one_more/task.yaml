@@ -1,8 +1,24 @@
 accessible: true
 author: ''
-context: ''
+context: |- 
+        Make a program which adds 1 to  a given integer from a user. Please, see the following screenshots. Your output should be **exactly same** for a given number. 
+        
+        If a user types 5, it print **The answer is 6.**. 
+
+        .. code-block:: bash
+
+             Type an integer:5
+             The answer is 6.
+
+        If a user types -3, it print **The answer is -2.**.
+
+        .. code-block:: bash
+
+             Type an integer:-3
+             The answer is -2.
+        
 environment: cpp
-evaluate: best
+evaluate: e2e
 groups: false
 input_random: '0'
 limits:
@@ -14,21 +30,38 @@ network_grading: false
 order: 10
 problems:
     addone:
-        default: ''
-        type: code
         header: |-
-            .. code-block:: c
 
-                #include <cstdlib>
-                #include <ctime>
-                #include <iostream>
-                using namespace std;
-                int main(int argc,char** argv)
-                {
-                    cout<<"Type an integer:";
-                    //Write your code below.
-                    return 0;
-                }
+        name: Add one to a user's input.
+        type: custom
+        boxes:
+            btext1:
+                type: text
+                content: |-
+                    Please, complete the program by typing your code  between :code:`cout<<"Type your integer:";` and :code:`return 0;`.
+
+                    .. code-block:: c++
+
+                        #include <iostream>
+                        using namespace std;
+                        int main()
+                        {
+                            cout<<"Type your integer:";
+                    
+            question:
+                type: multiline
+                maxChars: 1000
+                lines: 6
+                language: cpp
+
+            btext2:
+                type: text
+                content: |-
+
+                    .. code-block:: c++
+
+                            return 0;
+                        }
         name: One more
         language: c
 stored_submissions: 0

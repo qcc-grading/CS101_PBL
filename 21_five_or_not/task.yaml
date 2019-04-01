@@ -31,12 +31,13 @@ problems:
     fiveornot:
         type: custom
         header: |-
-            Please, complete the program by typing your code  between :code:`cout<<"Type your integer:";` and :code:`return 0;`.
+            
         name: Five or not.
         boxes:
             btext1:
                 type: text
                 content: |-
+                    Please, complete the program by typing your code  between :code:`cout<<"Type your integer:";` and :code:`return 0;`.
 
                     .. code-block:: c++
 
@@ -58,6 +59,7 @@ problems:
 
                     .. code-block:: c++
 
+                            return 0;
                         }
 
 stored_submissions: 0

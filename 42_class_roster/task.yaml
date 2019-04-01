@@ -157,11 +157,7 @@ problems:
 
             .. code-block:: cpp
 
-               void report(const vector<char>& attendances)
-    test:
-        type: demo
-        header: hi
-    
+               void report(const vector<char>& attendances)  
     last:
         type: custom
         header: Hello.

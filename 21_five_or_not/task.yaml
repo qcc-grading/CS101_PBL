@@ -29,24 +29,37 @@ network_grading: false
 order: 10
 problems:
     fiveornot:
+        type: custom
         header: |-
-            Your code needs to look the following code.
+            Please, complete the program by typing your code  between :code:`cout<<"Type your integer:";` and :code:`return 0;`.
+        name: Five or not.
+        boxes:
+            btext1:
+                type: text
+                content: |-
 
-            .. code-block:: c++
+                    .. code-block:: c++
 
-                #include <iostream>
-                using namespace std;
-                int main()
-                {
-                    cout<<"Type your integer:";
-                    //Write your code below.
-                    return 0;
-                }
-            
-            Please, type your code below which is between :code:`cout<<"Type your integer:";` and :code:`return 0;`.
-        language: cpp
-        name: Five or not
-        type: code
+                        #include <iostream>
+                        using namespace std;
+                        int main()
+                        {
+                            cout<<"Type your integer:";
+                    
+            question:
+                type: multiline
+                maxChars: 1000
+                lines: 5
+                language: cpp
+
+            btext2:
+                type: text
+                content: |-
+
+                    .. code-block:: c++
+
+                        }
+
 stored_submissions: 0
 submission_limit:
     amount: -1

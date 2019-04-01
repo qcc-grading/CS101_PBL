@@ -167,12 +167,18 @@ problems:
         header: Hello.
         name: And again, another name
         boxes:
-            boxId1:
+            btext1:
                 type: text
-                content: Some additional text1
-            boxId2:
+                content: :code:`{`
+            question:
+                type: multiline
+                maxChars: 1000
+                lines: 5
+                language: cpp
+
+            btext2:
                 type: text
-                content: Some additional text2
+                content: :code:`}`
 
 stored_submissions: 0
 submission_limit:

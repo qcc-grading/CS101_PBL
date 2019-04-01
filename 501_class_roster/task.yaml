@@ -190,7 +190,7 @@ problems:
             Make a :code:`int count(const vector<char>& attendances, char att)` which returns the number of attendance records for :code:`att`.
 
             .. code-block:: bash
-            
+
                 A: absent
                 L: late
                 E: excused
@@ -307,7 +307,7 @@ problems:
         type: code
         header: |-
             Make a :code:`void clear(vector<string>& names, vector<char>& attendances)` which makes :code:`names` and :code:`attendances` empty.
-            To make them empty, you may use :code:`clear()<http://www.cplusplus.com/reference/vector/vector/clear/>`_ member function.
+            To make them empty, you may use :code:`clear()`( http://www.cplusplus.com/reference/vector/vector/clear/ ) member function.
 
             For example, if we run the code below,
                       

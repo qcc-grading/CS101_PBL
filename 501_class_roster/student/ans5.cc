@@ -30,8 +30,8 @@ void clear(vector<string>& names, vector<char>& attendances)
     cout<<" All of records were cleared.";
 }
 int main(){
-    vector<string> names {"A","B","C","D","E","F"};
-    vector<char> attendances {'A','A','L','E','E','E'};
+    vector<string> names={"A","B","C","D","E","F"};
+    vector<char> attendances={'A','A','L','E','E','E'};
     string choice="";
     do{
         cout<<"Attendance Roster"<<endl;

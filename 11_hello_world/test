@@ -1,0 +1,17 @@
+#!/bin/bash
+echo "test"
+make t
+output=$(./t)
+#echo "$output"
+ans=$'*\n* *\n* * *\n* * * *\n* * * * *'  # no white spaces in bash syntax, with the exception of string literals
+aans=${ans//*/a}
+#echo "$ans"
+echo "$aans"
+if [ "$output" = "$ans" ]; then
+    echo "Pass"
+else
+    echo "Fail"
+fi
+orig=$'Axx\nBCyyyDEFzzLMN'
+mod=${orig//\n/_}
+echo "$mod"

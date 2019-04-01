@@ -1,0 +1,1 @@
+kilograms#SUCCESS#test the function kilograms#1#

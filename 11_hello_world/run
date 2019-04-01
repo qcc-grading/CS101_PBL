@@ -1,0 +1,18 @@
+#!/bin/bash
+
+getinput "thecode" > student/student_code.cpp
+make student/student_code
+output=$(./student/student_code)
+
+ans=$'Hello World!'  # bash syntax
+if [ "$output" = "$ans" ]; then
+    feedback-result success
+    feedback-msg -em "Your program displayed : $output" 
+else
+    feedback-result failed
+    feedback-msg -em "Your program displayed : $output"
+fi
+
+# clean student files
+output=0
+rm -r student/student_code* 

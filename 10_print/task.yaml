@@ -1,0 +1,35 @@
+accessible: true
+author: ''
+context: ''
+environment: cpp
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    time: '30'
+    output: '2'
+    memory: '100'
+name: 10. Simple output
+network_grading: false
+problems:
+    thecode:
+        default: ''
+        type: code
+        header: |-
+            Write a simple C++ program displaying the following on standard output:
+
+            | a
+            | a a
+            | a a a
+            | a a a a
+            | a a a a a
+
+            Make sure to include the preprocessor directive(s) and the main function.
+        name: Simple output
+        language: python
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+weight: 1.0

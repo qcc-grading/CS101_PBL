@@ -1,0 +1,1 @@
+double triple(double x);

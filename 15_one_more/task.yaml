@@ -1,0 +1,93 @@
+accessible: true
+author: ''
+context: ''
+environment: cpp
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    memory: '100'
+    output: '2'
+    time: '30'
+name: 15. One more
+network_grading: false
+order: 10
+problems:
+    addone:
+        default: ''
+        type: code
+        header: |-
+            .. code-block:: c
+
+                #include <cstdlib>
+                #include <ctime>
+                #include <iostream>
+                using namespace std;
+                int main(int argc,char** argv)
+                {
+                    cout<<"Type an integer:";
+                    //Write your code below.
+                    return 0;
+                }
+        name: One more
+        language: c
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags:
+    '0':
+        description: Your code exceeds the maximum allowed time.
+        name: Timeout
+        visible: true
+        id: timeout
+        type: 1
+    '1':
+        id: sigsegv
+        name: Segmentation Fault
+        description: ''
+        visible: true
+        type: 1
+    '2':
+        visible: true
+        description: You code does not compile.
+        id: not_compile
+        name: Not compile
+        type: 1
+    '3':
+        id: memory
+        name: Memory Exceeded
+        visible: true
+        description: ''
+        type: 1
+    '4':
+        visible: true
+        name: Floating Point Exception
+        type: 1
+        id: sigfpe
+        description: ''
+    '5':
+        description: Your code produced a double free.
+        name: Double free
+        visible: true
+        type: 1
+        id: double_free
+    '6':
+        type: 1
+        name: Banned functions
+        description: You use some banned functions.
+        visible: true
+        id: banned_funcs
+    '8':
+        visible: true
+        type: 1
+        id: cppcheck
+        name: Cppcheck fails
+        description: Your code does not compile with cppcheck
+    '7':
+        type: 2
+        description: ''
+        visible: true
+        name: S1
+        id: ''
+weight: 1.0

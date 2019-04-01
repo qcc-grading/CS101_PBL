@@ -1,0 +1,1 @@
+squareroot#SUCCESS#test the function squareroot#1#

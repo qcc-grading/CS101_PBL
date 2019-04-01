@@ -1,0 +1,1 @@
+gcd#SUCCESS#test the function gcd#1#

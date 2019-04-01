@@ -1,0 +1,1 @@
+triple#SUCCESS#test the function triple#1#

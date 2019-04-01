@@ -1,0 +1,92 @@
+accessible: true
+author: ''
+context: ''
+environment: cpp
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: 403. To fahrenheit
+network_grading: false
+order: 10
+problems:
+    fahrenheit:
+        language: c
+        type: code
+        name: To fahrenheit
+        default: ''
+        header: |-
+            Write only the *body* of a function called *fahrenheit* which receives a floating point
+            number *c* representing a temperature value in Celsius degrees and returns
+            the equivalent temperature value mesured in Fahrenheit degrees, according to the conversion
+            formula:
+
+            .. math::
+                F = \frac{9}{5}\cdot C+32 \,.
+
+            .. code-block:: c
+
+                double fahrenheit(double c)
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags:
+    '0':
+        id: timeout
+        description: Your code exceeds the maximum allowed time.
+        name: Timeout
+        visible: true
+        type: 1
+    '1':
+        type: 1
+        id: sigsegv
+        visible: true
+        description: ''
+        name: Segmentation Fault
+    '2':
+        id: not_compile
+        description: You code does not compile.
+        visible: true
+        name: Not compile
+        type: 1
+    '3':
+        id: memory
+        name: Memory Exceeded
+        visible: true
+        description: ''
+        type: 1
+    '4':
+        description: ''
+        visible: true
+        type: 1
+        name: Floating Point Exception
+        id: sigfpe
+    '5':
+        description: Your code produced a double free.
+        type: 1
+        id: double_free
+        visible: true
+        name: Double free
+    '6':
+        name: Banned functions
+        id: banned_funcs
+        description: You use some banned functions.
+        type: 1
+        visible: true
+    '7':
+        description: Your code does not compile with cppcheck
+        visible: true
+        id: cppcheck
+        type: 1
+        name: Cppcheck fails
+    '8':
+        name: S1
+        type: 2
+        visible: true
+        description: ''
+        id: ''
+weight: 1.0

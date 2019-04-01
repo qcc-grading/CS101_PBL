@@ -1,0 +1,129 @@
+accessible: true
+author: 'KWANG KIM'
+context: |- 
+        Make a program which checks whether a given integer from a user is positive, zero or negative. Please, see the following screenshots. Your output should be same for a given number. 
+        
+        If a user types a positive integer like 5, it print **POSITIVE**. 
+
+        .. code-block:: bash
+
+             Type an integer:5
+             POSITIVE
+
+        If a user types 0, it print **ZERO**.
+
+        .. code-block:: bash
+
+             Type an integer:0
+             ZERO
+        
+        If a user types a negative integer like -3, it print **NEGATIVE**.
+
+        .. code-block:: bash
+
+             Type an integer:-3
+             NEGATIVE   
+environment: e2e
+evaluate: best
+groups: false
+limits:
+    memory: '100'
+    output: '2'
+    time: '30'
+name: 201. Positive, zero or neagive
+network_grading: false
+order: 10
+problems:
+    positivezeronegative:
+        header: |-
+
+        name: Positive zero, negative
+        type: custom
+        boxes:
+            btext1:
+                type: text
+                content: |-
+                    Please, complete the program by typing your code  between :code:`cout<<"Type your integer:";` and :code:`return 0;`.
+
+                    .. code-block:: c++
+
+                        #include <iostream>
+                        using namespace std;
+                        int main()
+                        {
+                            cout<<"Type your integer:";
+                    
+            question:
+                type: multiline
+                maxChars: 1000
+                lines: 6
+                language: cpp
+
+            btext2:
+                type: text
+                content: |-
+
+                    .. code-block:: c++
+
+                            return 0;
+                        }
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags:
+    '0':
+        description: Your code exceeds the maximum allowed time.
+        id: timeout
+        name: Timeout
+        type: 1
+        visible: true
+    '1':
+        description: ''
+        id: sigsegv
+        name: Segmentation Fault
+        type: 1
+        visible: true
+    '2':
+        description: You code does not compile.
+        id: not_compile
+        name: Not compile
+        type: 1
+        visible: true
+    '3':
+        description: ''
+        id: memory
+        name: Memory Exceeded
+        type: 1
+        visible: true
+    '4':
+        description: ''
+        id: sigfpe
+        name: Floating Point Exception
+        type: 1
+        visible: true
+    '5':
+        description: Your code produced a double free.
+        id: double_free
+        name: Double free
+        type: 1
+        visible: true
+    '6':
+        description: You use some banned functions.
+        id: banned_funcs
+        name: Banned functions
+        type: 1
+        visible: true
+    '7':
+        description: ''
+        id: ''
+        name: S1
+        type: 2
+        visible: true
+    '8':
+        description: Your code does not compile with cppcheck
+        id: cppcheck
+        name: Cppcheck fails
+        type: 1
+        visible: true
+weight: 1.0

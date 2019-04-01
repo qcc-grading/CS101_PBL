@@ -1,0 +1,105 @@
+accessible: true
+author: ''
+context: ''
+environment: cpp
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: 409. Square root by Newton method
+network_grading: false
+order: 10
+problems:
+    squareroot:
+        default: ''
+        language: c
+        name: Square root by Newton method
+        type: code
+        header: |-
+            Write only the *body* of a function called *squareroot* which receives a floating point
+            number :math:`f` and returns the square root :math:`\sqrt{f}` by computing 
+            a sequence of values :math:`x_0, x_1, x_2, \ldots \to \sqrt{f}` defined by
+            formula:
+
+            .. math::
+                x_n = \left\{ 
+                	\begin{array}{rr} 
+                	 f, & \text{if } n = 0 \\
+                	x_{n-1} - \cfrac{x_{n-1}^2 - f}{2x_{n-1}}, & \text{if } n \ge 1
+                	\end{array}
+                	\right.\, .
+
+            The function should return the last computed value :math:`x_n` when 
+
+            .. math::
+            	|x_n-x_{n-1}| \le 10^{-10}\,\,.
+
+            **Hint:** First you must handle the case :math:`f=0`.
+
+
+            .. code-block:: c
+
+                double squareroot(double f)
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags:
+    '0':
+        id: timeout
+        description: Your code exceeds the maximum allowed time.
+        name: Timeout
+        visible: true
+        type: 1
+    '1':
+        type: 1
+        id: sigsegv
+        visible: true
+        description: ''
+        name: Segmentation Fault
+    '2':
+        id: not_compile
+        description: You code does not compile.
+        visible: true
+        name: Not compile
+        type: 1
+    '3':
+        id: memory
+        name: Memory Exceeded
+        visible: true
+        description: ''
+        type: 1
+    '4':
+        description: ''
+        visible: true
+        type: 1
+        name: Floating Point Exception
+        id: sigfpe
+    '5':
+        description: Your code produced a double free.
+        type: 1
+        id: double_free
+        visible: true
+        name: Double free
+    '6':
+        name: Banned functions
+        id: banned_funcs
+        description: You use some banned functions.
+        type: 1
+        visible: true
+    '7':
+        description: Your code does not compile with cppcheck
+        visible: true
+        id: cppcheck
+        type: 1
+        name: Cppcheck fails
+    '8':
+        name: S1
+        type: 2
+        visible: true
+        description: ''
+        id: ''
+weight: 1.0

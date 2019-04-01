@@ -1,0 +1,126 @@
+name: 102. One more
+accessible: true
+author: ''
+context: |- 
+        Make a program which adds 1 to  a given integer from a user. Please, see the following screenshots. Your output should be **exactly same** for a given number. 
+        
+        If a user types 5, it print **The answer is 6!**. 
+
+        .. code-block:: bash
+
+             Type an integer:5
+             The answer is 6!
+
+        If a user types -3, it print **The answer is -2!**.
+
+        .. code-block:: bash
+
+             Type an integer:-3
+             The answer is -2!
+        
+environment: e2e
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    memory: '100'
+    output: '2'
+    time: '30'
+network_grading: false
+order: 10
+problems:
+    addone:
+        header: |-
+
+        name: Add one to a user's input.
+        type: custom
+        boxes:
+            btext1:
+                type: text
+                content: |-
+                    Please, complete the program by typing your code  between :code:`cout<<"Type your integer:";` and :code:`return 0;`.
+
+                    .. code-block:: c++
+
+                        #include <iostream>
+                        using namespace std;
+                        int main()
+                        {
+                            cout<<"Type your integer:";
+                    
+            question:
+                type: multiline
+                maxChars: 1000
+                lines: 6
+                language: cpp
+
+            btext2:
+                type: text
+                content: |-
+
+                    .. code-block:: c++
+
+                            return 0;
+                        }
+        name: One more
+        language: c
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags:
+    '0':
+        description: Your code exceeds the maximum allowed time.
+        name: Timeout
+        visible: true
+        id: timeout
+        type: 1
+    '1':
+        id: sigsegv
+        name: Segmentation Fault
+        description: ''
+        visible: true
+        type: 1
+    '2':
+        visible: true
+        description: You code does not compile.
+        id: not_compile
+        name: Not compile
+        type: 1
+    '3':
+        id: memory
+        name: Memory Exceeded
+        visible: true
+        description: ''
+        type: 1
+    '4':
+        visible: true
+        name: Floating Point Exception
+        type: 1
+        id: sigfpe
+        description: ''
+    '5':
+        description: Your code produced a double free.
+        name: Double free
+        visible: true
+        type: 1
+        id: double_free
+    '6':
+        type: 1
+        name: Banned functions
+        description: You use some banned functions.
+        visible: true
+        id: banned_funcs
+    '8':
+        visible: true
+        type: 1
+        id: cppcheck
+        name: Cppcheck fails
+        description: Your code does not compile with cppcheck
+    '7':
+        type: 2
+        description: ''
+        visible: true
+        name: S1
+        id: ''
+weight: 1.0

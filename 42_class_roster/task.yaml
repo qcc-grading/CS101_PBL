@@ -160,13 +160,16 @@ problems:
                void report(const vector<char>& attendances)
 
     last:
-        type: custom
+        type: custom 2
         header: Hello.
         name: And again, another name
         boxes:
             boxId1:
                 type: text
-                content: Some additional text
+                content: Some additional text1
+            boxId2:
+                type: text
+                content: Some additional text2
 
 stored_submissions: 0
 submission_limit:

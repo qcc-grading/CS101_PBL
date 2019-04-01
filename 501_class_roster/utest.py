@@ -11,9 +11,12 @@ def utest(template,codename,ext,tag_num,tag,e2etest=False,order=[],check=[]):
     returncode, make_output = make(codename)
     # If compilation failed, exit with "failed" result
     if returncode:
-        feedback.set_tag("[{}] {}:not_compile".format(tag_num,tag), True)
-        feedback.set_global_result("[{}] {}: failed".format(tag_num,tag))
-        feedback.set_global_feedback("[{}] {}: The compilation of your code has failed. Please see the exit message of ``make`` command:".format(tag_num,tag))
+        #feedback.set_tag("[{}] {}:not_compile".format(tag_num,tag), True)
+        #feedback.set_global_result("[{}] {}: failed".format(tag_num,tag))
+        #feedback.set_global_feedback("[{}] {}: The compilation of your code has failed. Please see the exit message of ``make`` command:".format(tag_num,tag))
+        feedback.set_tag("not_compile", True)
+        feedback.set_global_result("failed")
+        feedback.set_global_feedback("The compilation of your code has failed. Please see the exit message of ``make`` command:")
         feedback.set_global_feedback(rst.get_codeblock('', make_output), True)
         exit(0)
     # Remove source files
@@ -40,7 +43,7 @@ def ureport(scores):
     feedback.set_global_result("success" if avg >=90  else "failed")
     #scores_list="["+(",".join([str(s) for x in scores])+"]"
     #feedback.set_global_feedback("The list of scores of each question is "+scores_list+".")
-    feedback.set_global_feedback("The list of scores of each question is .")
+    #feedback.set_global_feedback("The list of scores of each question is .")
 
 
         

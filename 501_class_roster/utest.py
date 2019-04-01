@@ -1,24 +1,24 @@
 import subprocess, shlex, re
-import inginious
+from inginious import feedback, rst, input
 import sys
 
 def utest(template,codename,ext,tag_num,tag,e2etest=False,order=[],check=[]):
     # Fetch and save the student code into a file for compilation
-    inginious.input.parse_template(template, codename+"."+ext)
+    input.parse_template(template, codename+"."+ext)
 
     # Compilation
     returncode, make_output = make(codename)
     # If compilation failed, exit with "failed" result
     if returncode:
-        inginious.feedback.set_tag("[{}] {}:not_compile".format(tag_num,tag), True)
-        inginious.feedback.set_global_result("[{}] {}: failed".format(tag_num,tag))
-        inginious.feedback.set_global_inginious.feedback("[{}] {}: The compilation of your code has failed. Please see the exit message of ``make`` command:".format(tag_num,tag))
-        inginious.feedback.set_global_inginious.feedback(inginious.rst.get_codeblock('', make_output), True)
+        feedback.set_tag("[{}] {}:not_compile".format(tag_num,tag), True)
+        feedback.set_global_result("[{}] {}: failed".format(tag_num,tag))
+        feedback.set_global_inginious.feedback("[{}] {}: The compilation of your code has failed. Please see the exit message of ``make`` command:".format(tag_num,tag))
+        feedback.set_global_inginious.feedback(rst.get_codeblock('', make_output), True)
         exit(0)
     # Remove source files
     subprocess.run("rm -rf *.c *.tpl *.h *.o", shell=True)
 
-    LANG = inginious.input.get_input('@lang')
+    LANG = input.get_input('@lang')
     # Run a code
     score = 0
     if e2etest==True: # you need order, check
@@ -35,8 +35,8 @@ def utest(template,codename,ext,tag_num,tag,e2etest=False,order=[],check=[]):
 
 def ureport(scores):
     avg=round(sum(scores)/len(scores))
-    inginious.feedback.set_grade(avg)
-    inginious.feedback.set_global_result("success" if avg >=90  else "failed")
-    inginious.feedback.set_global_inginious.feedback("The list of scores of each question is "+str([scores])+".")
+    feedback.set_grade(avg)
+    feedback.set_global_result("success" if avg >=90  else "failed")
+    feedback.set_global_inginious.feedback("The list of scores of each question is "+str([scores])+".")
 
         

@@ -161,7 +161,7 @@ problems:
 
     last:
         type: custom
-        header: some text
+        header: Hello.
         name: And again, another name
         boxes:
             boxId1:

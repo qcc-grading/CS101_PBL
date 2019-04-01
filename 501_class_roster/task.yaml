@@ -38,13 +38,101 @@ context: |
 
     .. code-block:: cpp
 
-        #include<iostream>
-        #include<vector>
-        using namespace std;
-        void add(vector<string>& names, vector<char>& attendances);
-        int count(const vector<char>& attendances, char att);
-        void report(const vector<char>& attendances);
-        void clear(vector<string>& names, vector<char>& attendances);
+            #include<iostream>
+            #include<string>
+            #include<vector>
+            using namespace std;
+            void add(vector<string>& names, vector<char>& attendances);
+            int count(const vector<char>& attendances, char att);
+            void report(const vector<char>& attendances);
+            void clear(vector<string>& names, vector<char>& attendances);
+            int main(){
+                vector<string> names;
+                vector<char> attendances;
+                string choice="";
+                do{
+                    cout<<"Attendance Roster"<<endl;
+                    cout<<"a. Add new students."<<endl;
+                    cout<<"b. Report the attendance."<<endl;
+                    cout<<"c. Clear the roster."<<endl;
+                    cout<<"d. Stop."<<endl;
+                    cout<<"Chooce one of choices(a,b,c,d):";
+                    cin>>choice;
+                    if(choice=="a")  add(names, attendances);
+                    else if(choice=="b") report(attendances);
+                    else if(choice=="c") clear(names, attendances);
+                }while(choice != "d");
+                cout<<"Bye."<<endl;
+            }
+
+        The following screenshot may give some ideas on this project.
+
+        .. code:: bash
+
+            Attendance Roster
+            a. Add new students.
+            b. Report the attendance.
+            c. Clear the roster.
+            d. Stop.
+            Chooce one of choices(a,b,c,d):a
+            Type the name of student:James
+            Type the record of attendances(A,L,E,P):L
+            Do you want to add more students?(y/n):y
+            Type the name of student:Harden
+            Type the record of attendances(A,L,E,P):E
+            Do you want to add more students?(y/n):n
+            Attendance Roster
+            a. Add new students.
+            b. Report the attendance.
+            c. Clear the roster.
+            d. Stop.
+            Chooce one of choices(a,b,c,d):b
+            The number of absent students is 0.
+            The number of late students is 1.
+            The number of excused students is 1.
+            The number of present students is 0.
+            Attendance Roster
+            a. Add new students.
+            b. Report the attendance.
+            c. Clear the roster.
+            d. Stop.
+            Chooce one of choices(a,b,c,d):a
+            Type the name of student:Curry
+            Type the record of attendances(A,L,E,P):E
+            Do you want to add more students?(y/n):y
+            Type the name of student:Thompson
+            Type the record of attendances(A,L,E,P):P
+            Do you want to add more students?(y/n):n
+            Attendance Roster
+            a. Add new students.
+            b. Report the attendance.
+            c. Clear the roster.
+            d. Stop.
+            Chooce one of choices(a,b,c,d):b
+            The number of absent students is 0.
+            The number of late students is 1.
+            The number of excused students is 2.
+            The number of present students is 1.
+            Attendance Roster
+            a. Add new students.
+            b. Report the attendance.
+            c. Clear the roster.
+            d. Stop.
+            Chooce one of choices(a,b,c,d):c
+            All of records were cleared.Attendance Roster
+            a. Add new students.
+            b. Report the attendance.
+            c. Clear the roster.
+            d. Stop.
+            Chooce one of choices(a,b,c,d):b
+            There is no student.
+            Attendance Roster
+            a. Add new students.
+            b. Report the attendance.
+            c. Clear the roster.
+            d. Stop.
+            Chooce one of choices(a,b,c,d):d
+            Bye.            
 
 environment: e2e
 evaluate: best
@@ -65,16 +153,16 @@ problems:
         type: code
         header: |-
             Make a :code:`void add(vector<string>& names, vector<char>& attendances)` which **adds** new names and attendance records of students.
-
+            For a simpilicity, we only type **the last name without any space**. (So we can still use :code:`cin`). We assume that a user type `A`, `L`, `E` and `P` properly.
             Please, check the following screenshot.
             
             .. code-block:: bash
 
                 Type the name of student:James
-                Type the record of attendances:L
+                Type the record of attendances(A,L,E,P):L
                 Do you want to add more students?(y/n):y
                 Type the name of student:Curry
-                Type the record of attendances:E
+                Type the record of attendances(A,L,E,P):E
                 Do you want to add more students?(y/n):n
                             
             Do not forget `{ }`.
@@ -210,9 +298,16 @@ problems:
 
                 clear(vector<string>& names, vector<char>& attendances);
 
-            , the following code
+            ,  it will show
 
-            .. code-block:: bash
+            .. code-block:: cpp
+
+               All of records were cleared.
+
+
+            Then the following code
+
+            .. code-block:: cpp
 
                report(attendances);
 

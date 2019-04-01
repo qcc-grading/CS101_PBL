@@ -3,76 +3,25 @@
 # Script d'interface entre INGInious et des tests unitaires écrits à l'aide de CUnit
 # Auteurs : Mathieu Xhonneux, Anthony Gégo
 # Licence : GPLv3
-
 import subprocess, shlex, re, os, yaml
-from inginious import feedback, rst, input
-
-# Switch working directory to student/
-os.chdir("student")
-
-
-
-# Fetch and save the student code into a file for compilation
-input.parse_template("student_code.c.tpl", "student_code.cc")
-
-# Compilation
-p = subprocess.Popen(shlex.split("make student_code"), stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
-make_output = p.communicate()[0].decode('utf-8')
-# If compilation failed, exit with "failed" result
-if p.returncode:
-    feedback.set_tag("not_compile", True)
-    feedback.set_global_result("failed")
-    feedback.set_global_feedback("The compilation of your code has failed. Please see the exit message of ``make`` command:")
-    feedback.set_global_feedback(rst.get_codeblock('', make_output), True)
-    exit(0)
-# Remove source files
-subprocess.run("rm -rf *.c *.tpl *.h *.o", shell=True)
-
-LANG = input.get_input('@lang')
-"""
-#pexpect part E2E
+import inginious 
 import pexpect as px
-def e2e(name, orders, timeout=5):       
-    for order in orders:
-        child = px.spawn('./'+name)
-        #child.delaybeforesend = 0
-        output=''
-        # if order is not empty, 
-        if order['expect']:
-            child.expect(order['expect'])
-        if order['send']:
-            child.sendline(order['send'])
-        retcode = child.expect([px.TIMEOUT, px.EOF],timeout)
-        if retcode==0:
-            #print("retcode==0")
-            return "Failure"
-        elif child.after is not None:
-            output=''.join(child.before.decode("utf-8").split())
-        #print("output:",output)
-        if order['check'] == output:
-            continue
-        else:
-            return "Failure"
-    return "Success"
-### We ignore spaces.
-orders=[{'expect':'integer:','send':'7','check':'7POSITIVE'},{'expect':'integer:','send':'0','check':'0ZERO'},{'expect':'integer:','send':'-9','check':'-9NEGATIVE'}]
-result=e2e('student_code',orders)
-"""
+from e2e import e2e, check_maker, make
+from utest import utest,ureport
+os.chdir("student")]
 
-# Run the code in a parallel container
-p = subprocess.Popen(shlex.split("run_student --time 20 --hard-time 60 ./student_code LANGUAGE={}".format(LANG)), stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
-o, e = p.communicate()
-result=o.decode("utf-8")
-score = 0
-if result == "Success":
-    score = 100
-else: # Fail
-    score = 0
+scores=[0]*5
 
-feedback.set_grade(score)
-feedback.set_global_result("success" if score >= 50 else "failed")
+codename='code1'
+template='code1.cc.tpl'
+ext="cc"
+tag_num="1"
+tag="add_function"
+order=[{'expect': ':', 'send': 'a'}, {'expect': ':', 'send': 'Curry'}, {'expect': ':', 'send': 'L'}, {'expect': ':', 'send': 'n'}, {'expect': ':', 'send': 'd'}]
+ans="ans1"
+e2etest=True
 
-# test
-data=input.load_input()
-#feedback.set_global_feedback(str(data)+" "+result)
-
+make(ans)
+check=check_maker(ans,order)
+scores[0]=utest(template,codename,ext,tag_num,tag,e2etest,order,check)
+ureport(scores)

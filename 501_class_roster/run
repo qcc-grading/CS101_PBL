@@ -25,6 +25,7 @@ e2etest=True
 make(ans)
 check=check_maker(ans,order)
 scores[0]=utest(template,codename,ext,tag_num,tag,e2etest,order,check)
+
 #q2
 codename='code2'
 template='code2.cc.tpl'
@@ -37,7 +38,7 @@ e2etest=False
 
 #make(ans)
 #check=check_maker(ans,order)
-scores[1]=utest(template,codename,ext,tag_num,tag,e2etest,order=[],check=[None])
+scores[1]=utest(template,codename,ext,tag_num,tag,e2etest,order=[],check=[""])
 
 
 #q3

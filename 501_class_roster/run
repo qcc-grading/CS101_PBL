@@ -17,7 +17,7 @@ template='code1.cc.tpl'
 ext="cc"
 tag_num="1"
 tag="add_function"
-order=[{'expect': ':', 'send': 'a'}, {'expect': ':', 'send': 'Curry'}, {'expect': ':', 'send': 'L'}, {'expect': ':', 'send': 'n'}, {'expect': ':', 'send': 'd'}]
+order=[{'expect': ':', 'send': 'a'}, {'expect': ':', 'send': 'Curry'}, {'expect': ':', 'send': 'L'}, {'expect': ':', 'send': 'n'}, {'expect': ':', 'send': 'c'},{'expect': ':', 'send': 'd'}]
 ans="ans1"
 e2etest=True
 

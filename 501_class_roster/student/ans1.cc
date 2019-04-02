@@ -17,8 +17,26 @@ void add(vector<string>& names, vector<char>& attendances){
         cin>>choice;
     }while(choice=="y");
 }
-int count(const vector<char>& attendances, char att){ return 0;}
-void report(const vector<char>& attendances){}
+int count(const vector<char>& attendances, char att)
+{
+    int c=0;
+    for(size_t i=0;i<attendances.size();++i){
+        if(attendances[i]==att) ++c;
+    }
+    return c;
+}
+void report(const vector<char>& attendances)
+{
+    static const vector<string> desc={"absent","late","excused","present"};
+    static const vector<char> atts={'A','L','E','P'};
+    if(attendances.size()==0){
+        cout<<"There is no student."<<endl;
+        return;
+    }
+    for(size_t i=0;i<4;++i){
+        cout<<"The number of "<<desc[i]<<" students is "<<count(attendances,atts[i])<<"."<<endl;
+    }
+}
 void clear(vector<string>& names, vector<char>& attendances){}
 //int count(const vector<char>& attendances, char att);
 //void report(const vector<char>& attendances);

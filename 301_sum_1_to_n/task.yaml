@@ -29,14 +29,14 @@ limits:
     memory: '100'
     output: '2'
     time: '30'
-name: 300. Print from 1 to n
+name: 300. Sum from 1 to n
 network_grading: false
 order: 10
 problems:
     sum1ton:
         header: |-
 
-        name: Print from 1 to n
+        name: Sum from 1 to n
         type: custom
         boxes:
             btext1:

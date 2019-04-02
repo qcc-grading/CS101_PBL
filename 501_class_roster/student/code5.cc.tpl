@@ -26,8 +26,8 @@ void report(const vector<char>& attendances){}
 void clear(vector<string>& names, vector<char>& attendances)
 @@clear@@
 int main(){
-    vector<string> names {"A","B","C","D","E","F"};
-    vector<char> attendances {'A','A','L','E','E','E'};
+    vector<string> names= {"A","B","C","D","E","F"};
+    vector<char> attendances= {'A','A','L','E','E','E'};
     string choice="";
     do{
         cout<<"Attendance Roster"<<endl;

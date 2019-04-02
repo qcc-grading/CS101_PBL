@@ -1,1 +1,0 @@
-double suminvsquares(int n);

@@ -1,23 +1,23 @@
 accessible: true
 author: 'KWANG KIM'
 context: |- 
-        Make a program which prints positive integers from 1 to n which n is a positive integer from a user. 
+        Make a program which prints the sum from 1 to n which n is a positive integer between 1 and 10 from a user. 
 
-        We assume that a user always types a positive integer properly.
+        We assume that a user always types a positive integer between 1 and 10 properly.
 
-        If a user types 5, it print **12345**.
+        If a user types 5, it print **1+2+3+4+5=15**.
 
         .. code-block:: bash
 
             Type your positive integer:5
-            12345
+            1+2+3+4+5=15
 
-        If a user types 3, it print **123**.
+        If a user types 3, it print **1+2+3=6**.
 
         .. code-block:: bash
 
             Type your positive integer:3
-            123
+            1+2+3=6
         
         The output should be** exactly same**.
         
@@ -33,7 +33,7 @@ name: 300. Print from 1 to n
 network_grading: false
 order: 10
 problems:
-    oneton:
+    sum1ton:
         header: |-
 
         name: Print from 1 to n

@@ -18,9 +18,9 @@ codename='student_code'
 template='student_code.cc.tpl'
 ext="cc"
 tag_num="1"
-tag="sum1ton"
+tag="print1ton"
 import random
-n=random.randint(1,10)
+n=random.randint(1,9)
 order=[{'expect': ':', 'send': str(n)}]
 ans="ans"
 e2etest=True

@@ -1,1 +1,0 @@
-sumofsquares#SUCCESS#test the function sumofsquares#1#

@@ -1,1 +1,0 @@
-sumofcubes#SUCCESS#test the function sumofcubes#1#

@@ -8,6 +8,7 @@ import inginious
 import pexpect as px
 from e2e import e2e, check_maker, make
 from utest import utest, ureport
+
 os.chdir("student")
 
 scores=[0]*5

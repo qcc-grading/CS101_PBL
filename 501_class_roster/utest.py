@@ -4,7 +4,7 @@ from e2e import make, e2e
 import sys
 def mctest(id,answer):
     q=input.get_input(id)
-    return 100 if (q==answer) else 0
+    return 100 if (str(q)==str(answer)) else 0
 
 def utest(template,codename,ext,tag_num,tag,e2etest=False,order=[],check=[]):
     # Fetch and save the student code into a file for compilation

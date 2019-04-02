@@ -78,3 +78,8 @@ scores[4]=utest(template,codename,ext,tag_num,tag,e2etest,order,check)
 
 #report
 ureport(scores,60)
+
+
+#remove source file
+
+subprocess.run("rm -rf *.cc *.tpl *.h *.o", shell=True)

@@ -19,8 +19,6 @@ def utest(template,codename,ext,tag_num,tag,e2etest=False,order=[],check=[]):
         feedback.set_global_feedback("The compilation of your code has failed. Please see the exit message of ``make`` command:")
         feedback.set_global_feedback(rst.get_codeblock('', make_output), True)
         exit(0)
-    # Remove source files
-    subprocess.run("rm -rf *.c *.tpl *.h *.o", shell=True)
 
     LANG = input.get_input('@lang')
     # Run a code

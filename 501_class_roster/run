@@ -4,10 +4,9 @@
 # Auteurs : Mathieu Xhonneux, Anthony Gégo
 # Licence : GPLv3
 import subprocess, shlex, re, os, yaml
-import inginious 
 import pexpect as px
 from e2e import e2e, check_maker, make
-from utest import utest, ureport
+from utest import mctest, utest, ureport
 
 os.chdir("student")
 
@@ -42,9 +41,7 @@ scores[1]=utest(template,codename,ext,tag_num,tag,e2etest,order=[],check=[""])
 
 
 #q3
-q3=input.get_input("MCQcount")
-ans_key=3
-scores[2]=100 if (q3==ans_key) else 0
+scores[2]=mctest("MCQcount",3)
 
 
 #q4

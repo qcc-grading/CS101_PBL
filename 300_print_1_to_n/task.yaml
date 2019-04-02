@@ -5,14 +5,14 @@ context: |-
 
         We assume that a user always type a positive integer properly.
 
-         If a user types 5, it print *12345**.
+         If a user types 5, it print **12345**.
 
         .. code-block:: bash
 
             Type your positive integer:5
             12345
 
-        If a user types 3, it print *123**.
+        If a user types 3, it print **123**.
 
         .. code-block:: bash
 

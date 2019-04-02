@@ -1,0 +1,1 @@
+invfactorial#SUCCESS#test the function invfactorial#1#

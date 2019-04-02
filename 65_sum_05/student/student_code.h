@@ -1,0 +1,1 @@
+double sumaltharmonic(int n);

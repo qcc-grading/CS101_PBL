@@ -1,0 +1,1 @@
+power#SUCCESS#test the function power#1#

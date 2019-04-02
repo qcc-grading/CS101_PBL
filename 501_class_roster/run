@@ -4,7 +4,6 @@
 # Auteurs : Mathieu Xhonneux, Anthony Gégo
 # Licence : GPLv3
 import subprocess, shlex, re, os, yaml
-import pexpect as px
 from e2e import e2e, check_maker, make
 from utest import mctest, utest, ureport
 
@@ -74,7 +73,7 @@ check=check_maker(ans,order)
 scores[4]=utest(template,codename,ext,tag_num,tag,e2etest,order,check)
 
 #report
-ureport(scores,60)
+ureport(scores,100)
 
 
 #remove source file

@@ -1,0 +1,1 @@
+int sumofcubes(int n);

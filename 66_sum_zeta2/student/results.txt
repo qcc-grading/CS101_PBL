@@ -1,0 +1,1 @@
+suminvsquares#SUCCESS#test the function suminvsquares#1#

@@ -1,0 +1,1 @@
+int sumofsquares(int n);

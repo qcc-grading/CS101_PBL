@@ -1,0 +1,38 @@
+#!/bin/python3
+
+# Script d'interface entre INGInious et des tests unitaires écrits à l'aide de CUnit
+# Auteurs : Mathieu Xhonneux, Anthony Gégo
+# Licence : GPLv3
+
+import subprocess, shlex, re, os, yaml
+from e2e import e2e, check_maker, make
+from utest import mctest, utest, ureport
+
+# Switch working directory to student/
+os.chdir("student")
+
+scores=[0]*1
+
+#q1
+codename='student_code'
+template='student_code.cc.tpl'
+ext="cc"
+tag_num="1"
+tag="print1ton"
+import random
+n=random.randint(1,9)
+order=[{'expect': ':', 'send': str(n)}]
+ans="ans"
+e2etest=True
+
+
+make(ans)
+check=check_maker(ans,order)
+scores[0]=utest(template,codename,ext,tag_num,tag,e2etest,order,check)
+
+#report
+ureport(scores,100)
+
+#remove source file
+
+subprocess.run("rm -rf *. *.cc *.tpl *.h *.o", shell=True)

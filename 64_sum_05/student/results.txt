@@ -1,0 +1,1 @@
+sumharmonic#SUCCESS#test the function sumharmonic#1#

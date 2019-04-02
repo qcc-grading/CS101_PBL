@@ -1,0 +1,1 @@
+sum#SUCCESS#test the function sum#1#

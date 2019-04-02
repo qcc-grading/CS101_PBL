@@ -1,0 +1,126 @@
+accessible: true
+author: 'KWANG KIM'
+context: |- 
+        Make a program which print positive integers from 1 to n which n is a positive integer from a user. 
+
+        We assume that a user always type a positive integer properly.
+
+         If a user types 5, it print *12345**.
+
+        .. code-block:: bash
+
+            Type your positive integer:5
+            12345
+
+        If a user types 3, it print *123**.
+
+        .. code-block:: bash
+
+            Type your positive integer:3
+            123
+        
+  
+environment: e2e
+evaluate: best
+groups: false
+limits:
+    memory: '100'
+    output: '2'
+    time: '30'
+name: 300. Print from 1 to n
+network_grading: false
+order: 10
+problems:
+    oneton:
+        header: |-
+
+        name: Print from 1 to n
+        type: custom
+        boxes:
+            btext1:
+                type: text
+                content: |-
+                    Please, complete the program by typing your code  between :code:`cout<<"Type your positive integer:";` and :code:`return 0;`.
+
+                    .. code-block:: c++
+
+                        #include <iostream>
+                        using namespace std;
+                        int main()
+                        {
+                            cout<<"Type your positive integer:";
+                    
+            question:
+                type: multiline
+                maxChars: 1000
+                lines: 6
+                language: cpp
+
+            btext2:
+                type: text
+                content: |-
+
+                    .. code-block:: c++
+
+                            return 0;
+                        }
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags:
+    '0':
+        description: Your code exceeds the maximum allowed time.
+        id: timeout
+        name: Timeout
+        type: 1
+        visible: true
+    '1':
+        description: ''
+        id: sigsegv
+        name: Segmentation Fault
+        type: 1
+        visible: true
+    '2':
+        description: You code does not compile.
+        id: not_compile
+        name: Not compile
+        type: 1
+        visible: true
+    '3':
+        description: ''
+        id: memory
+        name: Memory Exceeded
+        type: 1
+        visible: true
+    '4':
+        description: ''
+        id: sigfpe
+        name: Floating Point Exception
+        type: 1
+        visible: true
+    '5':
+        description: Your code produced a double free.
+        id: double_free
+        name: Double free
+        type: 1
+        visible: true
+    '6':
+        description: You use some banned functions.
+        id: banned_funcs
+        name: Banned functions
+        type: 1
+        visible: true
+    '7':
+        description: ''
+        id: ''
+        name: S1
+        type: 2
+        visible: true
+    '8':
+        description: Your code does not compile with cppcheck
+        id: cppcheck
+        name: Cppcheck fails
+        type: 1
+        visible: true
+weight: 1.0

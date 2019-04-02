@@ -3,6 +3,6 @@ using namespace std;
 int main()
 {
 	cout<<"Type your positive integer:";
-@    @oneton/question@@	
+@    @sum1ton/question@@	
 	return 0;
 }

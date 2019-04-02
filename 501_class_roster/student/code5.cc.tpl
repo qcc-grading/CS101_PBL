@@ -11,7 +11,7 @@ int count(const vector<char>& attendances, char att)
     }
     return c;
 }
-void report(const vector<char>& attendances){}
+void report(const vector<char>& attendances)
 {
     static const vector<string> desc={"absent","late","excused","present"};
     static const vector<char> atts={'A','L','E','P'};

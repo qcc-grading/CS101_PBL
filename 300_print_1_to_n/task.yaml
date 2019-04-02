@@ -5,7 +5,7 @@ context: |-
 
         We assume that a user always type a positive integer properly.
 
-         If a user types 5, it print **12345**.
+        If a user types 5, it print **12345**.
 
         .. code-block:: bash
 
